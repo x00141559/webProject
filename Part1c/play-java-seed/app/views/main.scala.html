@@ -1,0 +1,47 @@
+@* Start Jordan *@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Software.ie - @title</title>
+		    <meta charset="UTF-8">        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("styles/main.css")">
+		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+        <script src="@routes.Assets.versioned("scripts/search.js")"></script>
+    </head>
+    <body>
+        <div id="outer-content-wrapper">
+            <header>
+                <h1>Software.ie</h1>
+            </header>
+            <div id ="content-wrapper">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid" style="background-color: rgb(215,215,215)">
+                      <ul class="nav navbar-nav">
+                        <li @if(title == "Home"){class="active"}><a href="/" style="color: #00d7d7">Home</a></li>
+                        <li @if(title == "About"){class="active"}><a href="/about" style="color: #00d7d7">About</a></li>
+                        <li @if(title == "Products"){class="active"}><a href="/products" style="color: #00d7d7">Products</a></li>
+                      </ul>
+                      <form class="navbar-form navbar-left pull-right">
+                        <div class="input-group">
+                          <input type="text" id="searchContent" class="form-control" placeholder="Search">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="return search()">
+                              <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                      <a href="/basket"><img src="@routes.Assets.versioned("images/shopping-cart.png")" class="basket"/></a>
+                    </div>
+                </nav>
+                <main>
+                    @content
+                </main>
+                
+    </body>
+</html>
+@* End Jordan *@

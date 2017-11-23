@@ -1,0 +1,31 @@
+@()
+
+@main("Purchase") {
+			@* Start Rachel *@
+			<div class="container-fluid">
+					<h2>Purchase</h2>
+					<p> Here is a summary of your order</p>
+					<p> image goes  here</p>
+					<p>To continue with the purchase please enter your details in the form below</p>
+			 <form>
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="name" class="form-control" id="name">
+					</div>
+					<div class="form-group">
+						<label for="cardno">Card Number:</label>
+						<input type="cardno" class="form-control" id="cardno">
+					</div>
+					<div class="form-group">
+						<label for="ccn">CCN Number:</label>
+						<input type="password" class="form-control" id="ccn">
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" class="form-control" id="email">
+					</div>
+					<button type="submit" class="btn btn-success">Submit</button>
+				</form>
+				</div>
+			@* End Rachel *@
+}
