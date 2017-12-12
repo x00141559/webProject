@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/College/Web/play-java-seed/conf/routes
-// @DATE:Fri Nov 17 18:08:37 GMT 2017
+// @SOURCE:/media/sf_student/CA3/Part2/play-java-seed/conf/routes
+// @DATE:Tue Dec 12 16:33:27 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:12
+    // @LINE:11
     def search: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.search",
       """
@@ -30,7 +30,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:10
     def purchase: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.purchase",
       """
@@ -70,16 +70,6 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:10
-    def basket: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.basket",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "basket"})
-        }
-      """
-    )
-  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
@@ -92,7 +82,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:15
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -100,7 +90,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:14
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

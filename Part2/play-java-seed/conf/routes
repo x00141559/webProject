@@ -7,7 +7,6 @@ GET     /                           controllers.HomeController.index
 GET     /about                      controllers.HomeController.about
 GET     /products                   controllers.HomeController.products
 GET     /product                    controllers.HomeController.product
-GET     /basket                     controllers.HomeController.basket
 GET     /purchase                   controllers.HomeController.purchase
 GET     /search                     controllers.HomeController.search(query: String ?="All")
 

@@ -77,10 +77,10 @@ Seq[Any](format.raw/*1.4*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 17 18:08:38 GMT 2017
-                  SOURCE: E:/College/Web/play-java-seed/app/views/purchase.scala.html
-                  HASH: e0605583e3c7af6113aa9a0d84060bdff4597582
-                  MATRIX: 944->1|1040->3|1068->6|1092->22|1131->24|1162->46|1192->50|2111->957|2143->959
+                  DATE: Tue Dec 12 16:32:02 GMT 2017
+                  SOURCE: /media/sf_student/CA3/Part2/play-java-seed/app/views/purchase.scala.html
+                  HASH: 6977593e6aafe961200ae3cdf933bb8af6537c11
+                  MATRIX: 944->1|1040->3|1070->8|1094->24|1133->26|1165->49|1196->54|2140->986|2173->989
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|62->30|63->31
                   -- GENERATED --
               */

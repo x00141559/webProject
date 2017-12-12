@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:E:/College/Web/play-java-seed/conf/routes
-// @DATE:Fri Nov 17 18:08:37 GMT 2017
+// @SOURCE:/media/sf_student/CA3/Part2/play-java-seed/conf/routes
+// @DATE:Tue Dec 12 16:33:27 GMT 2017
 
 import play.api.mvc.Call
 
@@ -19,13 +19,13 @@ package controllers {
     }
 
   
-    // @LINE:12
+    // @LINE:11
     def search(query:String = "All"): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "search" + play.core.routing.queryString(List(if(query == "All") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("query", query)))))
     }
   
-    // @LINE:11
+    // @LINE:10
     def purchase(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "purchase")
@@ -49,12 +49,6 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "about")
     }
   
-    // @LINE:10
-    def basket(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "basket")
-    }
-  
     // @LINE:6
     def index(): Call = {
       
@@ -63,14 +57,14 @@ package controllers {
   
   }
 
-  // @LINE:15
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:15
+    // @LINE:14
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

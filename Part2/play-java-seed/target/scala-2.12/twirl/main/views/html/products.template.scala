@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object products extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[List[models.Product],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(products: List[models.Product]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.4*/("""
+Seq[Any](format.raw/*1.34*/("""
 
 """),_display_(/*3.2*/main("Products")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
 			"""),format.raw/*4.22*/("""
@@ -55,20 +55,20 @@ Seq[Any](format.raw/*1.4*/("""
 
 										<h1 class="product-header">Our Products</h1>
 										"""),format.raw/*25.95*/("""
-										"""),_display_(/*26.12*/for(i <- 1 to 10) yield /*26.29*/{_display_(Seq[Any](format.raw/*26.30*/("""
+										"""),_display_(/*26.12*/for(p <- products) yield /*26.30*/{_display_(Seq[Any](format.raw/*26.31*/("""
 											"""),format.raw/*27.12*/("""<div class="panel-group container-fluid">
 													<div class="panel panel-default">
 															<div class="panel-heading">
 															<h4 class="panel-title">
-																	<a data-toggle="collapse" href="#collapse"""),_display_(/*31.60*/i),format.raw/*31.61*/("""">Example Product Name</a>
+																	<a data-toggle="collapse" href="#collapse"""),_display_(/*31.60*/p/*31.61*/.getId),format.raw/*31.67*/("""">"""),_display_(/*31.70*/p/*31.71*/.getName),format.raw/*31.79*/("""</a>
 															</h4>
 													</div>
-													<div id="collapse"""),_display_(/*34.32*/i),format.raw/*34.33*/("""" class="panel-collapse collapse">
+													<div id="collapse"""),_display_(/*34.32*/p/*34.33*/.getId),format.raw/*34.39*/("""" class="panel-collapse collapse">
 															<div class="panel-body">
-																	Example Product Description/Images
-															</div>
-															<div class="panel-footer">&euro;0.00 &nbsp; """),format.raw/*38.74*/("""
-																	"""),format.raw/*39.18*/("""<button class="btn btn-success" type="submit">Add to Cart</button>
+																	"""),_display_(/*36.19*/p/*36.20*/.getDescription),format.raw/*36.35*/("""
+															"""),format.raw/*37.16*/("""</div>
+															<div class="panel-footer">&euro; """),_display_(/*38.50*/("%.2f".format(p.getPrice))),format.raw/*38.77*/(""" """),format.raw/*38.78*/("""&nbsp;
+																	<button class="btn btn-success" type="submit">Buy Now</button>
 															</div>
 													</div>
 													</div>
@@ -83,9 +83,9 @@ Seq[Any](format.raw/*1.4*/("""
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(products:List[models.Product]): play.twirl.api.HtmlFormat.Appendable = apply(products)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((List[models.Product]) => play.twirl.api.HtmlFormat.Appendable) = (products) => apply(products)
 
   def ref: this.type = this
 
@@ -94,11 +94,11 @@ Seq[Any](format.raw/*1.4*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 17 18:08:38 GMT 2017
-                  SOURCE: E:/College/Web/play-java-seed/app/views/products.scala.html
-                  HASH: 58e3ec91687273ac4161167d15cc8648ad75707e
-                  MATRIX: 944->1|1040->3|1068->6|1092->22|1131->24|1162->46|1210->67|2359->1272|2398->1284|2431->1301|2470->1302|2510->1314|2768->1545|2790->1546|2916->1645|2938->1646|3174->1868|3220->1886|3427->2062|3476->2083|3514->2109|3546->2111
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|57->25|58->26|58->26|58->26|59->27|63->31|63->31|66->34|66->34|70->38|71->39|77->45|78->46|79->47|80->48
+                  DATE: Tue Dec 12 16:55:21 GMT 2017
+                  SOURCE: /media/sf_student/CA3/Part2/play-java-seed/app/views/products.scala.html
+                  HASH: 9e2e10d1de06aec8078521c5954506c0aa552bc7
+                  MATRIX: 965->1|1092->33|1122->38|1146->54|1185->56|1217->79|1266->101|2435->1326|2475->1339|2509->1357|2548->1358|2589->1371|2851->1606|2861->1607|2888->1613|2918->1616|2928->1617|2957->1625|3064->1705|3074->1706|3101->1712|3223->1807|3233->1808|3269->1823|3314->1840|3398->1897|3446->1924|3475->1925|3709->2128|3759->2150|3798->2177|3831->2180
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|57->25|58->26|58->26|58->26|59->27|63->31|63->31|63->31|63->31|63->31|63->31|66->34|66->34|66->34|68->36|68->36|68->36|69->37|70->38|70->38|70->38|77->45|78->46|79->47|80->48
                   -- GENERATED --
               */
           
