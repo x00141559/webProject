@@ -1,0 +1,48 @@
+@()
+
+@main("Products") {
+			@* Start Jordan *@
+                    <!-- Admin Login Dropup -->
+                    <div class="dropdown admin-login">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Admin Login
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><form class="form container-fluid">
+                            <div class="form-group">
+                                <label for="email">Username:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                            </form></li>
+                        </ul>
+                    </div>
+
+										<h1 class="product-header">Our Products</h1>
+										@* These are harcoded but will be generated from the number of products in the db *@
+										@for(i <- 1 to 10){
+											<div class="panel-group container-fluid">
+													<div class="panel panel-default">
+															<div class="panel-heading">
+															<h4 class="panel-title">
+																	<a data-toggle="collapse" href="#collapse@i">Example Product Name</a>
+															</h4>
+													</div>
+													<div id="collapse@i" class="panel-collapse collapse">
+															<div class="panel-body">
+																	Example Product Description/Images
+															</div>
+															<div class="panel-footer">&euro;0.00 &nbsp; @*Same Here *@
+																	<button class="btn btn-success" type="submit">Add to Cart</button>
+															</div>
+													</div>
+													</div>
+												</div>
+											</br>
+										}
+                    </div>
+			@* End Jordan *@
+}

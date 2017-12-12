@@ -1,0 +1,19 @@
+Contributions:
+Group details:
+	Jordan Davy - x00138060
+	Rachel Byrne - x00141489
+	Aoife Begin - x00141559
+
+Pages:
+	Index - Aoife
+	About - Aoife
+	Product - Rachel
+	Basket - Rachel
+	Purchase - Rachel
+	Search - Jordan
+	ProductList - Jordan
+	
+Extra Details:
+	Incorpation into play was done by Jordan such as the creation of a main template,
+	Route configuration and editing the basic html files so they would work in a play
+	framweork project.
