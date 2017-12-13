@@ -1,27 +1,28 @@
-@(query: String)
+@(query: String)(products: List[models.Product])
 
 @main("Search") {
-			@* Start Jordan *@
-			<h1 class="product-header">X Results for @query</h1>
-			@for(i <- 1 to 10) {
+	@* Start Jordan *@
+			<h1 class="product-header">Results for @query</h1>
+			@for(p <- products){
 				<div class="panel-group container-fluid">
 						<div class="panel panel-default">
 								<div class="panel-heading">
-								<h4 class="panel-title">
-										<a data-toggle="collapse" href="#collapse@i">Example Search Result</a>
-								</h4>
-						</div>
-						<div id="collapse@i" class="panel-collapse collapse">
-								<div class="panel-body">
-										Example Product Description/Images
+		   							<h4 class="panel-title">
+										<a data-toggle="collapse" href="#collapse@p.getId">@p.getName</a>
+									</h4>
+				 	 			</div>
+									<div id="collapse@p.getId" class="panel-collapse collapse">
+											<div class="panel-body">
+													@p.getDescription
+											</div>
+											<div class="panel-footer">&euro; @("%.2f".format(p.getPrice)) &nbsp;
+													<button class="btn btn-success" type="submit">Buy Now</button>
+											</div>
+									</div>
+									</div>
 								</div>
-								<div class="panel-footer">&euro;0.00 &nbsp;
-										<button class="btn btn-success" type="submit">Add to Cart</button>
-								</div>
-						</div>
-						</div>
-					</div>
-				</br>
-			}
-			@* End Jordan *@
+							</br>
+						}
+	</div>
+@* End Jordan *@
 }

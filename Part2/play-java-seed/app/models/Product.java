@@ -47,6 +47,15 @@ public class Product extends Model {
         return Product.find.all();
     }
 
+    public static List<Product> findSearch(String query) {
+        if (query == "All") {
+            return Product.find.all();
+        } else {
+            return Ebean.find(Product.class).where().ilike("name", "%" + query + "%").findList();
+        }
+
+    }
+
 // Accessor methods
     public Long getId() {
         return id;

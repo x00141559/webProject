@@ -22,49 +22,50 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object search extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[String,play.twirl.api.HtmlFormat.Appendable] {
+object search extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,List[models.Product],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(query: String):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(query: String)(products: List[models.Product]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.17*/("""
+Seq[Any](format.raw/*1.49*/("""
 
 """),_display_(/*3.2*/main("Search")/*3.16*/ {_display_(Seq[Any](format.raw/*3.18*/("""
-			"""),format.raw/*4.22*/("""
-			"""),format.raw/*5.4*/("""<h1 class="product-header">X Results for """),_display_(/*5.46*/query),format.raw/*5.51*/("""</h1>
-			"""),_display_(/*6.5*/for(i <- 1 to 10) yield /*6.22*/ {_display_(Seq[Any](format.raw/*6.24*/("""
+	"""),format.raw/*4.20*/("""
+			"""),format.raw/*5.4*/("""<h1 class="product-header">Results for """),_display_(/*5.44*/query),format.raw/*5.49*/("""</h1>
+			"""),_display_(/*6.5*/for(p <- products) yield /*6.23*/{_display_(Seq[Any](format.raw/*6.24*/("""
 				"""),format.raw/*7.5*/("""<div class="panel-group container-fluid">
 						<div class="panel panel-default">
 								<div class="panel-heading">
-								<h4 class="panel-title">
-										<a data-toggle="collapse" href="#collapse"""),_display_(/*11.53*/i),format.raw/*11.54*/("""">Example Search Result</a>
-								</h4>
-						</div>
-						<div id="collapse"""),_display_(/*14.25*/i),format.raw/*14.26*/("""" class="panel-collapse collapse">
-								<div class="panel-body">
-										Example Product Description/Images
+		   							<h4 class="panel-title">
+										<a data-toggle="collapse" href="#collapse"""),_display_(/*11.53*/p/*11.54*/.getId),format.raw/*11.60*/("""">"""),_display_(/*11.63*/p/*11.64*/.getName),format.raw/*11.72*/("""</a>
+									</h4>
+				 	 			</div>
+									<div id="collapse"""),_display_(/*14.28*/p/*14.29*/.getId),format.raw/*14.35*/("""" class="panel-collapse collapse">
+											<div class="panel-body">
+													"""),_display_(/*16.15*/p/*16.16*/.getDescription),format.raw/*16.31*/("""
+											"""),format.raw/*17.12*/("""</div>
+											<div class="panel-footer">&euro; """),_display_(/*18.46*/("%.2f".format(p.getPrice))),format.raw/*18.73*/(""" """),format.raw/*18.74*/("""&nbsp;
+													<button class="btn btn-success" type="submit">Buy Now</button>
+											</div>
+									</div>
+									</div>
 								</div>
-								<div class="panel-footer">&euro;0.00 &nbsp;
-										<button class="btn btn-success" type="submit">Add to Cart</button>
-								</div>
-						</div>
-						</div>
-					</div>
-				</br>
-			""")))}),format.raw/*25.5*/("""
-			"""),format.raw/*26.20*/("""
-""")))}),format.raw/*27.2*/("""
+							</br>
+						""")))}),format.raw/*25.8*/("""
+	"""),format.raw/*26.2*/("""</div>
+"""),format.raw/*27.17*/("""
+""")))}),format.raw/*28.2*/("""
 """))
       }
     }
   }
 
-  def render(query:String): play.twirl.api.HtmlFormat.Appendable = apply(query)
+  def render(query:String,products:List[models.Product]): play.twirl.api.HtmlFormat.Appendable = apply(query)(products)
 
-  def f:((String) => play.twirl.api.HtmlFormat.Appendable) = (query) => apply(query)
+  def f:((String) => (List[models.Product]) => play.twirl.api.HtmlFormat.Appendable) = (query) => (products) => apply(query)(products)
 
   def ref: this.type = this
 
@@ -73,11 +74,11 @@ Seq[Any](format.raw/*1.17*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 12 16:32:02 GMT 2017
-                  SOURCE: /media/sf_student/CA3/Part2/play-java-seed/app/views/search.scala.html
-                  HASH: f495a9e1a76f7b0a730e73051b6c2cefb4c69b38
-                  MATRIX: 949->1|1059->16|1089->21|1111->35|1150->37|1182->60|1213->65|1281->107|1306->112|1342->123|1374->140|1413->142|1445->148|1679->355|1701->356|1810->438|1832->439|2197->774|2230->795|2263->798
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|43->11|43->11|46->14|46->14|57->25|58->26|59->27
+                  DATE: Wed Dec 13 14:29:07 GMT 2017
+                  SOURCE: /media/sf_student/CA/Part2/play-java-seed/app/views/search.scala.html
+                  HASH: a06898165d3cbb1049487f4b17ca1779bb9297b4
+                  MATRIX: 970->1|1112->48|1142->53|1164->67|1203->69|1233->90|1264->95|1330->135|1355->140|1391->151|1424->169|1462->170|1494->176|1732->387|1742->388|1769->394|1799->397|1809->398|1838->406|1932->473|1942->474|1969->480|2083->567|2093->568|2129->583|2170->596|2250->649|2298->676|2327->677|2532->852|2562->855|2598->879|2631->882
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|43->11|43->11|43->11|43->11|43->11|43->11|46->14|46->14|46->14|48->16|48->16|48->16|49->17|50->18|50->18|50->18|57->25|58->26|59->27|60->28
                   -- GENERATED --
               */
           

@@ -37,7 +37,6 @@ Seq[Any](format.raw/*1.4*/("""
 			"""),format.raw/*5.4*/("""<div class="container-fluid">
 					<h2>Purchase</h2>
 					<p> Here is a summary of your order</p>
-					<p> image goes  here</p>
 					<p>To continue with the purchase please enter your details in the form below</p>
 			 <form>
 					<div class="form-group">
@@ -59,8 +58,8 @@ Seq[Any](format.raw/*1.4*/("""
 					<button type="submit" class="btn btn-success">Submit</button>
 				</form>
 				</div>
-			"""),format.raw/*30.20*/("""
-""")))}),format.raw/*31.2*/("""
+			"""),format.raw/*29.20*/("""
+""")))}),format.raw/*30.2*/("""
 """))
       }
     }
@@ -77,11 +76,11 @@ Seq[Any](format.raw/*1.4*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 12 16:32:02 GMT 2017
-                  SOURCE: /media/sf_student/CA3/Part2/play-java-seed/app/views/purchase.scala.html
-                  HASH: 6977593e6aafe961200ae3cdf933bb8af6537c11
-                  MATRIX: 944->1|1040->3|1070->8|1094->24|1133->26|1165->49|1196->54|2140->986|2173->989
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|62->30|63->31
+                  DATE: Wed Dec 13 14:01:46 GMT 2017
+                  SOURCE: /media/sf_student/CA/Part2/play-java-seed/app/views/purchase.scala.html
+                  HASH: a1e089e88b27ea6fd78ac58076cbc4ca63556813
+                  MATRIX: 944->1|1040->3|1070->8|1094->24|1133->26|1165->49|1196->54|2109->955|2142->958
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|61->29|62->30
                   -- GENERATED --
               */
           

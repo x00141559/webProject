@@ -33,7 +33,8 @@ public class HomeController extends Controller {
     }
 
     public Result search(String query) {
-        return ok(search.render(query));
+        List<Product> productList = Product.findSearch(query);
+        return ok(search.render(query, productList));
     }
 
     public Result basket() {

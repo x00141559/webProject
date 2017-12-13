@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/media/sf_student/CA3/Part2/play-java-seed/conf/routes
-// @DATE:Tue Dec 12 16:33:27 GMT 2017
+// @SOURCE:/media/sf_student/CA/Part2/play-java-seed/conf/routes
+// @DATE:Wed Dec 13 13:57:35 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
