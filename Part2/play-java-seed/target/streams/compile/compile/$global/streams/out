@@ -1,14 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/media/sf_student/CA/Part2/play-java-seed/app/models/Product.java:52:1:  io.ebean.ExpressionList<models.Product> cannot be converted to java.util.List<models.Product>[0m
-[0m[[0m[31merror[0m] [0m[0m        .where().ilike("product.name", "%" + query + "%");[0m
-[0m[[0m[31merror[0m] [0m[0m/media/sf_student/CA/Part2/play-java-seed/app/models/Product.java:53:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable List[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class models.Product[0m
-[0m[[0m[31merror[0m] [0m[0m        return List<Product> abc;[0m
-[0m[[0m[31merror[0m] [0m[0m/media/sf_student/CA/Part2/play-java-seed/app/models/Product.java:53:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable Product[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class models.Product[0m
-[0m[[0m[31merror[0m] [0m[0m        return List<Product> abc;[0m
-[0m[[0m[31merror[0m] [0m[0m/media/sf_student/CA/Part2/play-java-seed/app/models/Product.java:53:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable abc[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class models.Product[0m
-[0m[[0m[31merror[0m] [0m[0m        return List<Product> abc;[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\jordo\Desktop\GitCA2\Part2\play-java-seed\app\views\login.scala.html:12:28: method globalError in class Form is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                @loginForm.globalError.message[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

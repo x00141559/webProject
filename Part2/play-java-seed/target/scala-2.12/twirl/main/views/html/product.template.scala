@@ -70,8 +70,8 @@ Seq[Any](format.raw/*1.4*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 13:57:36 GMT 2017
-                  SOURCE: /media/sf_student/CA/Part2/play-java-seed/app/views/product.scala.html
+                  DATE: Fri Dec 15 14:44:40 GMT 2017
+                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/product.scala.html
                   HASH: 3a1c284addac40c9c6d78de2ca9e367a9e69d485
                   MATRIX: 943->1|1039->3|1069->8|1092->23|1131->25|1163->48|1194->53|2383->1230|2416->1233
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|55->23|56->24

@@ -2,47 +2,27 @@
 
 @main("Products") {
 			@* Start Jordan *@
-                    <!-- Admin Login Dropup -->
-                    <div class="dropdown admin-login">
-                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Admin Login
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><form class="form container-fluid">
-                            <div class="form-group">
-                                <label for="email">Username:</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password:</label>
-                                <input type="password" class="form-control" id="pwd">
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                            </form></li>
-                        </ul>
-                    </div>
-
-										<h1 class="product-header">Our Products</h1>
-										@* These are harcoded but will be generated from the number of products in the db *@
-										@for(p <- products){
-											<div class="panel-group container-fluid">
-													<div class="panel panel-default">
-															<div class="panel-heading">
-															<h4 class="panel-title">
-																	<a data-toggle="collapse" href="#collapse@p.getId">@p.getName</a>
-															</h4>
-													</div>
-													<div id="collapse@p.getId" class="panel-collapse collapse">
-															<div class="panel-body">
-																	@p.getDescription
-															</div>
-															<div class="panel-footer">&euro; @("%.2f".format(p.getPrice)) &nbsp;
-																	<button class="btn btn-success" type="submit">Buy Now</button>
-															</div>
-													</div>
-													</div>
-												</div>
-											</br>
-										}
-                    </div>
+			<h1 class="product-header">Our Products</h1>
+				@for(p <- products){
+ 				<div class="panel-group container-fluid">
+					<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#collapse@p.getId">@p.getName</a>
+						</h4>
+					</div>
+					<div id="collapse@p.getId" class="panel-collapse collapse">
+						<div class="panel-body">
+							@p.getDescription
+						</div>
+						<div class="panel-footer">&euro; @("%.2f".format(p.getPrice)) &nbsp;
+							<button class="btn btn-success" type="submit">Buy Now</button>
+						</div>
+					</div>
+					</div>
+				</div>
+			</br>
+		}
+        	</div>
 			@* End Jordan *@
 }

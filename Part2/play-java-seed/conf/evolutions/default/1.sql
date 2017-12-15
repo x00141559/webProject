@@ -12,8 +12,18 @@ create table product (
   constraint pk_product primary key (id)
 );
 
+create table user (
+  email                         varchar(255) not null,
+  password                      varchar(255),
+  role                          varchar(255),
+  name                          varchar(255),
+  constraint pk_user primary key (email)
+);
+
 
 # --- !Downs
 
 drop table if exists product;
+
+drop table if exists user;
 

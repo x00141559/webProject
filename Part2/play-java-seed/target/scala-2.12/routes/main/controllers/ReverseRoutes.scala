@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/media/sf_student/CA/Part2/play-java-seed/conf/routes
-// @DATE:Wed Dec 13 13:57:35 GMT 2017
+// @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
+// @DATE:Fri Dec 15 15:54:08 GMT 2017
 
 import play.api.mvc.Call
 
@@ -57,14 +57,35 @@ package controllers {
   
   }
 
-  // @LINE:14
+  // @LINE:12
+  class ReverseLoginController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:13
+    def loginSubmit(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "loginSubmit")
+    }
+  
+    // @LINE:12
+    def login(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "login")
+    }
+  
+  }
+
+  // @LINE:17
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:14
+    // @LINE:17
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

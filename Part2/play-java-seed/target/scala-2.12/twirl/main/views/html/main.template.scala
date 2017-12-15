@@ -55,7 +55,10 @@ Seq[Any](format.raw/*2.32*/("""
                         <li """),_display_(/*24.30*/if(title == "Home")/*24.49*/{_display_(Seq[Any](format.raw/*24.50*/("""class="active"""")))}),format.raw/*24.65*/("""><a href="/" style="color: #00d7d7">Home</a></li>
                         <li """),_display_(/*25.30*/if(title == "About")/*25.50*/{_display_(Seq[Any](format.raw/*25.51*/("""class="active"""")))}),format.raw/*25.66*/("""><a href="/about" style="color: #00d7d7">About</a></li>
                         <li """),_display_(/*26.30*/if(title == "Products")/*26.53*/{_display_(Seq[Any](format.raw/*26.54*/("""class="active"""")))}),format.raw/*26.69*/("""><a href="/products" style="color: #00d7d7">Products</a></li>
-                      </ul>
+                        <li """),_display_(/*27.30*/if(title=="Login")/*27.48*/{_display_(Seq[Any](format.raw/*27.49*/("""class="active"""")))}),format.raw/*27.64*/(""">
+								<a href=""""),_display_(/*28.19*/routes/*28.25*/.LoginController.login()),format.raw/*28.49*/("""" style="color: #00d7d7">Login</a>
+						</li>
+                    </ul>
                       <form class="navbar-form navbar-left pull-right">
                         <div class="input-group">
                           <input type="text" id="searchContent" class="form-control" placeholder="Search">
@@ -69,8 +72,8 @@ Seq[Any](format.raw/*2.32*/("""
                     </div>
                 </nav>
                 <main>
-                    """),_display_(/*41.22*/content),format.raw/*41.29*/("""
-                """),format.raw/*42.17*/("""</main>
+                    """),_display_(/*44.22*/content),format.raw/*44.29*/("""
+                """),format.raw/*45.17*/("""</main>
                 
     </body>
 </html>
@@ -90,11 +93,11 @@ Seq[Any](format.raw/*2.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 13:57:36 GMT 2017
-                  SOURCE: /media/sf_student/CA/Part2/play-java-seed/app/views/main.scala.html
-                  HASH: 153e55124f5e5166cf0ba6e9995d0f9d854ac110
-                  MATRIX: 966->21|1091->51|1121->55|1224->132|1249->137|1693->554|1708->560|1765->596|2026->830|2041->836|2100->874|2558->1305|2586->1324|2625->1325|2671->1340|2778->1420|2807->1440|2846->1441|2892->1456|3005->1542|3037->1565|3076->1566|3122->1581|3939->2371|3967->2378|4013->2396
-                  LINES: 28->2|33->2|35->4|38->7|38->7|42->11|42->11|42->11|44->13|44->13|44->13|55->24|55->24|55->24|55->24|56->25|56->25|56->25|56->25|57->26|57->26|57->26|57->26|72->41|72->41|73->42
+                  DATE: Fri Dec 15 15:59:16 GMT 2017
+                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/main.scala.html
+                  HASH: d349da19ba30a0b775d4b4e3c8d2cf16841e9e45
+                  MATRIX: 966->21|1091->51|1121->55|1224->132|1249->137|1693->554|1708->560|1765->596|2026->830|2041->836|2100->874|2558->1305|2586->1324|2625->1325|2671->1340|2778->1420|2807->1440|2846->1441|2892->1456|3005->1542|3037->1565|3076->1566|3122->1581|3241->1673|3268->1691|3307->1692|3353->1707|3401->1728|3416->1734|3461->1758|4262->2532|4290->2539|4336->2557
+                  LINES: 28->2|33->2|35->4|38->7|38->7|42->11|42->11|42->11|44->13|44->13|44->13|55->24|55->24|55->24|55->24|56->25|56->25|56->25|56->25|57->26|57->26|57->26|57->26|58->27|58->27|58->27|58->27|59->28|59->28|59->28|75->44|75->44|76->45
                   -- GENERATED --
               */
           
