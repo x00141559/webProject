@@ -1,6 +1,6 @@
 package models.users;
 
-import play.Logger;
+
 
 public class Login {
     private String email;
@@ -8,7 +8,7 @@ public class Login {
 
     public String validate() {
 
-        if(User.authenticate(email, password) == null) {
+        if(User.authenticate(getEmail(), getPassword()) == null) {
             return "Invalid Email or Password";
         }
         return null;
@@ -27,7 +27,7 @@ public class Login {
         return password;
     }
 
-    public void setPassword() {
+    public void setPassword(String password) {
         this.password = password;
     }
 }

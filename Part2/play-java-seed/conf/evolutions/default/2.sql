@@ -1,10 +1,12 @@
+
 # --- Sample dataset
+
+
 
 # --- !Ups
 
-insert into user (email,name,password,role) values ( 'admin@products.com', 'Alice Admin', 'password', 'admin' );
-insert into user (email,name,password,role) values ( 'manager@products.com', 'Bob Manager', 'password', 'manager' );
-insert into user (email,name,password,role) values ( 'customer@products.com', 'Charlie Customer', 'password', 'customer' );
+delete from product;
+
 
 Insert into product (id, name, description, stock, price) values (1, 'Sonic The Hedgehog','Gaming', 9, 72.00);
 Insert into product (id, name, description, stock, price) values (2, 'Destiny 1', 'Gaming',10,100.00);

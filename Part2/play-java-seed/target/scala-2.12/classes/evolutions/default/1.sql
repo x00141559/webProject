@@ -14,9 +14,9 @@ create table product (
 
 create table user (
   email                         varchar(255) not null,
-  password                      varchar(255),
   role                          varchar(255),
   name                          varchar(255),
+  password                      varchar(255),
   constraint pk_user primary key (email)
 );
 

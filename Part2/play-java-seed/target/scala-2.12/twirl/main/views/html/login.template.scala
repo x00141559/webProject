@@ -22,18 +22,18 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Form[models.users.Login],play.twirl.api.HtmlFormat.Appendable] {
+object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.users.Login],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(loginForm: Form[models.users.Login]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(loginForm: Form[models.users.Login],user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*2.2*/import helper._
 
 
-Seq[Any](format.raw/*1.39*/("""
+Seq[Any](format.raw/*1.63*/("""
 """),format.raw/*3.1*/("""
-"""),_display_(/*4.2*/main("Login")/*4.15*/ {_display_(Seq[Any](format.raw/*4.17*/("""
+"""),_display_(/*4.2*/main("Login",user)/*4.20*/ {_display_(Seq[Any](format.raw/*4.22*/("""
     """),format.raw/*5.5*/("""<div class="container-fluid">
         <h2>Login</h2>
     </div>
@@ -69,9 +69,9 @@ Seq[Any](format.raw/*1.39*/("""
     }
   }
 
-  def render(loginForm:Form[models.users.Login]): play.twirl.api.HtmlFormat.Appendable = apply(loginForm)
+  def render(loginForm:Form[models.users.Login],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(loginForm,user)
 
-  def f:((Form[models.users.Login]) => play.twirl.api.HtmlFormat.Appendable) = (loginForm) => apply(loginForm)
+  def f:((Form[models.users.Login],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (loginForm,user) => apply(loginForm,user)
 
   def ref: this.type = this
 
@@ -80,10 +80,10 @@ Seq[Any](format.raw/*1.39*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 15 17:51:02 GMT 2017
-                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/login.scala.html
-                  HASH: 18572e3dc37d1c0772ccecd1fa69000534fa8d18
-                  MATRIX: 966->1|1076->41|1121->38|1149->58|1177->61|1198->74|1237->76|1269->82|1402->188|1440->217|1480->219|1522->233|1599->283|1617->292|1658->312|1700->326|1746->341|1784->352|1823->382|1863->384|1905->398|1982->448|1996->453|2038->474|2080->488|2126->503|2164->514|2179->520|2252->584|2292->586|2334->601|2347->605|2378->615|2420->629|2490->672|2632->793|2674->807|2764->870|2916->1001|2958->1015|3143->1169|3176->1175
+                  DATE: Mon Dec 18 15:54:00 GMT 2017
+                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/login.scala.html
+                  HASH: 244554c5526c244df1c05aca8d5214150e1f6f27
+                  MATRIX: 984->1|1118->64|1163->62|1190->80|1217->82|1243->100|1282->102|1313->107|1441->208|1479->237|1519->239|1560->252|1636->301|1654->310|1695->330|1736->343|1781->357|1818->367|1857->397|1897->399|1938->412|2014->461|2028->466|2070->487|2111->500|2156->514|2193->524|2208->530|2281->594|2321->596|2362->610|2375->614|2406->624|2447->637|2516->679|2657->799|2698->812|2786->873|2937->1003|2978->1016|3159->1166|3191->1171
                   LINES: 28->1|31->2|34->1|35->3|36->4|36->4|36->4|37->5|42->10|42->10|42->10|43->11|44->12|44->12|44->12|45->13|46->14|47->15|47->15|47->15|48->16|49->17|49->17|49->17|50->18|51->19|52->20|52->20|52->20|52->20|53->21|53->21|53->21|54->22|55->23|56->24|57->25|59->27|60->28|61->29|65->33|66->34
                   -- GENERATED --
               */

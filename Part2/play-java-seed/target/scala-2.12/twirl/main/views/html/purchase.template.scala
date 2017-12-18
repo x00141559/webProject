@@ -22,17 +22,17 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object purchase extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object purchase extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(purchase: String, user: models.users.User)(content:Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.4*/("""
+Seq[Any](format.raw/*1.59*/("""
 
-"""),_display_(/*3.2*/main("Purchase")/*3.18*/ {_display_(Seq[Any](format.raw/*3.20*/("""
+"""),_display_(/*3.2*/main("Purchase",user)/*3.23*/ {_display_(Seq[Any](format.raw/*3.25*/("""
 			"""),format.raw/*4.22*/("""
 			"""),format.raw/*5.4*/("""<div class="container-fluid">
 					<h2>Purchase</h2>
@@ -65,9 +65,9 @@ Seq[Any](format.raw/*1.4*/("""
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(purchase:String,user:models.users.User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(purchase,user)(content)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((String,models.users.User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (purchase,user) => (content) => apply(purchase,user)(content)
 
   def ref: this.type = this
 
@@ -76,10 +76,10 @@ Seq[Any](format.raw/*1.4*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 15 14:44:40 GMT 2017
-                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/purchase.scala.html
-                  HASH: a1e089e88b27ea6fd78ac58076cbc4ca63556813
-                  MATRIX: 944->1|1040->3|1070->8|1094->24|1133->26|1165->49|1196->54|2109->955|2142->958
+                  DATE: Mon Dec 18 15:54:01 GMT 2017
+                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/purchase.scala.html
+                  HASH: f69059f1ceef4dd2f83c50e65e6ee13248033ae2
+                  MATRIX: 974->1|1126->58|1154->61|1183->82|1222->84|1253->106|1283->110|2172->987|2204->989
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|61->29|62->30
                   -- GENERATED --
               */

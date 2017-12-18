@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
-// @DATE:Fri Dec 15 15:54:08 GMT 2017
+// @SOURCE:/home/wdd/webapps/webProject/Part2/play-java-seed/conf/routes
+// @DATE:Mon Dec 18 16:17:56 GMT 2017
 
 import play.api.mvc.Call
 
@@ -19,58 +19,72 @@ package controllers {
     }
 
   
-    // @LINE:11
+    // @LINE:8
+    def addProductSubmit(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "addProductSubmit")
+    }
+  
+    // @LINE:13
     def search(query:String = "All"): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "search" + play.core.routing.queryString(List(if(query == "All") None else Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("query", query)))))
     }
   
-    // @LINE:10
-    def purchase(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "purchase")
-    }
-  
-    // @LINE:8
-    def products(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "products")
-    }
-  
     // @LINE:9
-    def product(): Call = {
+    def deleteProduct(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "product")
+      Call("GET", _prefix + { _defaultPrefix } + "delProduct/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:7
-    def about(): Call = {
+    // @LINE:10
+    def updateProduct(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "about")
+      Call("GET", _prefix + { _defaultPrefix } + "updateProduct/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
     // @LINE:6
-    def index(): Call = {
+    def index(cat:Long = 0L): Call = {
       
-      Call("GET", _prefix)
+      Call("GET", _prefix + play.core.routing.queryString(List(if(cat == 0L) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("cat", cat)))))
+    }
+  
+    // @LINE:7
+    def addProduct(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "addProduct")
     }
   
   }
 
-  // @LINE:12
+  // @LINE:14
   class ReverseLoginController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:15
     def loginSubmit(): Call = {
+    
+      () match {
       
-      Call("POST", _prefix + { _defaultPrefix } + "loginSubmit")
+        // @LINE:15
+        case ()  =>
+          
+          Call("POST", _prefix + { _defaultPrefix } + "loginSubmit")
+      
+      }
+    
     }
   
-    // @LINE:12
+    // @LINE:18
+    def logout(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "logout")
+    }
+  
+    // @LINE:14
     def login(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "login")
@@ -78,14 +92,14 @@ package controllers {
   
   }
 
-  // @LINE:17
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:17
+    // @LINE:20
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

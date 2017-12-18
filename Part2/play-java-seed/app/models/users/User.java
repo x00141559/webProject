@@ -23,6 +23,30 @@ public class User extends Model {
 
     public User() {
     }
+    public String getEmail(){
+        return email;
+    }
+    public String getRole(){
+        return role;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getPassword(){
+        return password;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public void setRole(String role){
+        this.role = role;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setPassword(String password){
+        this.password = password;
+    }
 
     public static Finder<String, User> find = new Finder<String, User>(User.class);
 
@@ -31,17 +55,16 @@ public class User extends Model {
     }
 
     public static User authenticate(String email, String password) {
-        // List<User> uList = findAll();
-        // if(!(uList.size() == 0)) {
-        //     for(int i = 0; i < uList.size(); i++) {
-        //         if(uList.get(i).email == email) {
-        //             if (uList.get(i).password == password) {
-        //                 return uList.get(i);
-        //             }
-        //         }
-        //     }
-        // }
-        // return null;
+     
         return find.query().where().eq("email", email).eq("password", password).findUnique();
     }
+    public static User getUserById(String id){
+        if (id== null){
+            return null;
+        }else{
+            return find.byId(id);
+        }
+    }
+
+  
 }

@@ -22,17 +22,17 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object search extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,List[models.Product],play.twirl.api.HtmlFormat.Appendable] {
+object search extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,List[models.Product],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(query: String)(products: List[models.Product]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(query: String)(products: List[models.Product], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.49*/("""
+Seq[Any](format.raw/*1.74*/("""
 
-"""),_display_(/*3.2*/main("Search")/*3.16*/ {_display_(Seq[Any](format.raw/*3.18*/("""
+"""),_display_(/*3.2*/main("Search",user)/*3.21*/ {_display_(Seq[Any](format.raw/*3.23*/("""
 	"""),format.raw/*4.20*/("""
 			"""),format.raw/*5.4*/("""<h1 class="product-header">Results for """),_display_(/*5.44*/query),format.raw/*5.49*/("""</h1>
 			"""),_display_(/*6.5*/for(p <- products) yield /*6.23*/{_display_(Seq[Any](format.raw/*6.24*/("""
@@ -63,9 +63,9 @@ Seq[Any](format.raw/*1.49*/("""
     }
   }
 
-  def render(query:String,products:List[models.Product]): play.twirl.api.HtmlFormat.Appendable = apply(query)(products)
+  def render(query:String,products:List[models.Product],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(query)(products,user)
 
-  def f:((String) => (List[models.Product]) => play.twirl.api.HtmlFormat.Appendable) = (query) => (products) => apply(query)(products)
+  def f:((String) => (List[models.Product],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (query) => (products,user) => apply(query)(products,user)
 
   def ref: this.type = this
 
@@ -74,10 +74,10 @@ Seq[Any](format.raw/*1.49*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 15 14:44:40 GMT 2017
-                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/search.scala.html
-                  HASH: a06898165d3cbb1049487f4b17ca1779bb9297b4
-                  MATRIX: 970->1|1112->48|1142->53|1164->67|1203->69|1233->90|1264->95|1330->135|1355->140|1391->151|1424->169|1462->170|1494->176|1732->387|1742->388|1769->394|1799->397|1809->398|1838->406|1932->473|1942->474|1969->480|2083->567|2093->568|2129->583|2170->596|2250->649|2298->676|2327->677|2532->852|2562->855|2598->879|2631->882
+                  DATE: Mon Dec 18 15:54:01 GMT 2017
+                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/search.scala.html
+                  HASH: 0abd58a23abd209627c5d12d4dfa4e09956c639e
+                  MATRIX: 988->1|1155->73|1183->76|1210->95|1249->97|1278->117|1308->121|1374->161|1399->166|1434->176|1467->194|1505->195|1536->200|1770->407|1780->408|1807->414|1837->417|1847->418|1876->426|1967->490|1977->491|2004->497|2116->582|2126->583|2162->598|2202->610|2281->662|2329->689|2358->690|2556->858|2585->860|2620->883|2652->885
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|43->11|43->11|43->11|43->11|43->11|43->11|46->14|46->14|46->14|48->16|48->16|48->16|49->17|50->18|50->18|50->18|57->25|58->26|59->27|60->28
                   -- GENERATED --
               */

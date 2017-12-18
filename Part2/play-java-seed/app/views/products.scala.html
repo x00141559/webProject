@@ -1,6 +1,6 @@
-@(products: List[models.Product])
+@(products: List[models.Product], user: models.users.User)
 
-@main("Products") {
+@main("Products",user) {
 			@* Start Jordan *@
 			<h1 class="product-header">Our Products</h1>
 				@for(p <- products){

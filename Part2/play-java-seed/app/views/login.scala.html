@@ -1,7 +1,7 @@
-@(loginForm: Form[models.users.Login])
+@(loginForm: Form[models.users.Login],user: models.users.User)
 @import helper._
 
-@main("Login") {
+@main("Login",user) {
     <div class="container-fluid">
         <h2>Login</h2>
     </div>

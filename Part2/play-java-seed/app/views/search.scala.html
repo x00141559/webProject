@@ -1,6 +1,6 @@
-@(query: String)(products: List[models.Product])
+@(query: String)(products: List[models.Product], user: models.users.User)
 
-@main("Search") {
+@main("Search",user) {
 	@* Start Jordan *@
 			<h1 class="product-header">Results for @query</h1>
 			@for(p <- products){

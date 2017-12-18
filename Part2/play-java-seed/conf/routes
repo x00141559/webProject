@@ -3,15 +3,18 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
-GET     /about                      controllers.HomeController.about
-GET     /products                   controllers.HomeController.products
-GET     /product                    controllers.HomeController.product
-GET     /purchase                   controllers.HomeController.purchase
+GET     /                           controllers.HomeController.index(cat:Long?=0L)
+GET     /addProduct                     controllers.HomeController.addProduct 
+POST   /addProductSubmit                    controllers.HomeController.addProductSubmit 
+GET     /delProduct/:id                     controllers.HomeController.deleteProduct(id: Long) 
+GET     /updateProduct/:id                     controllers.HomeController.updateProduct(id: Long) 
+
+
 GET     /search                     controllers.HomeController.search(query: String ?="All")
 GET     /login                      controllers.LoginController.login
 POST    /loginSubmit                controllers.LoginController.loginSubmit
+GET    /loginSubmit                controllers.LoginController.loginSubmit
 
-
+GET   /logout                controllers.LoginController.logout
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
