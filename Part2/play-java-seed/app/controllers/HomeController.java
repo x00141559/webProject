@@ -22,46 +22,48 @@ public class HomeController extends Controller {
     public HomeController(FormFactory f){
         this.formFactory = f;
     }
+
     public Result index(Long cat ){
         List<Product> productList = null;
         if (cat ==0){
             productList = Product.findAll();
-
-            
         }
         else{
             return null;
         }
         return ok(index.render(productList,User.getUserById(session().get("email"))));
     }
-@Security.Authenticated(Secured.class)
-@With(AuthAdmin.class)
-public Result addProduct(){
-    Form<Product> productForm = formFactory.form(Product.class);
-    return ok(addProduct.render(productForm,User.getUserById(session().get("email"))));
-}
-    // public Result about() {
-    //     return ok(about.render(User.getUserById(session().get("email"))));
-    // }
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
+    public Result addProduct(){
+        Form<Product> productForm = formFactory.form(Product.class);
+        return ok(addProduct.render(productForm,User.getUserById(session().get("email"))));
+    }
+
+    public Result about() {
+        return ok(about.render(User.getUserById(session().get("email"))));
+    }
 
     public Result addProductSubmit(){
         Form<Product> newProductForm = formFactory.form(Product.class).bindFromRequest();
-        if(newProductForm.hasErrors()){
+        if(newProductForm.hasErrors()) {
             return badRequest(addProduct.render(newProductForm,User.getUserById(session().get("email"))));
         }
         else{
             Product newProduct = newProductForm.get();
             if (newProduct.getId()==null){
                 newProduct.save();
-                flash("success","Product "+newProduct.getName()+"was added");
+                flash("success","Product "+newProduct.getName()+" was added");
             }
             else if(newProduct.getId()!=null){
                 newProduct.update();       
-                flash("success","Product "+newProduct.getName()+"was updated");
-                 }
+                flash("success","Product "+newProduct.getName()+" was updated");
+            }
         }
-        return redirect(controllers.routes.HomeController.index(0));
+        return redirect(controllers.routes.HomeController.products());
     }
+
+
     @Security.Authenticated(Secured.class)
     @With(AuthAdmin.class)
     @Transactional
@@ -73,24 +75,24 @@ public Result addProduct(){
             productForm = formFactory.form(Product.class).fill(p);
         }
         catch(Exception e){
-   return badRequest("error");
+            return badRequest("error");
         }
         return ok(addProduct.render(productForm,User.getUserById(session().get("email"))));
     }
     public Result products() {
         List<Product> productList = Product.findAll();
-        return ok(products.render(productList,User.getUserById(session().get("email"))));
+        return ok(products.render(productList, User.getUserById(session().get("email"))));
     }
 
-    // public Result product() {
-    //     return ok(product.render(product()));
-    // }
+    public Result product(Long id) {
+        Product p = Product.findById(id);
+        return ok(product.render(p, User.getUserById(session().get("email"))));
+    }
 
     public Result search(String query) {
         List<Product> productList = Product.findSearch(query);
         return ok(search.render(query, productList,User.getUserById(session().get("email"))));
     }
-
 
     // public Result purchase() {
     //     return ok(purchase.render(purchase.class,User.getUserById(session().get("email"))));
@@ -102,6 +104,6 @@ public Result addProduct(){
     public Result deleteProduct(Long id){
         Product.find.ref(id).delete();
         flash("success","product has been deleted");
-        return redirect(routes.HomeController.index(0));
+        return redirect(routes.HomeController.products());
     }
 }

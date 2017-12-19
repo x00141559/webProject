@@ -1,24 +1,21 @@
-@(product: String, user: models.users.User)(content:Html)
+@(p: models.Product, user: models.users.User)
 
-@main("Product",user) {
-			@* Start Rachel *@
+@main("Product", user) {
+	@if(p != null) {
 			<div class="container-fluid">
-					<!---Start Rachel -->
-					<div class="product-container">
-							<h2>Product</h2>
-							<div class="product-img">
-									image goes here
-							</div>
-							<div class="product-description">
-									Lorem ipsum dolor sit amet, duo eu appareat vulputate, ut vis agam platonem. 
-									Summo ludus maiorum sed et, usu habeo offendit disputando ea. Altera adipiscing sea in, natum tibique an qui. Pri amet officiis antiopam id, id his clita tamquam iracundia. Sensibus platonem scribentur vel ea. Ex duo appareat intellegat.
-									Persius nominavi pertinax ad pri. Ei latine accusata cum. Oratio decore reprimique ut per, possim copiosae te nec. Inermis nominati has no.
-									Postea sapientem eam eu. Ridens definiebas an quo, porro aliquam verterem eum id, ferri saperet qui ad. Ad justo summo mundi duo. Facer melius appareat cu est, est ad idque nusquam corpora. Vel in mundi errem scribentur, vix scripta saperet no.
-							</div>
-							<div class="addtocart">
-									&euro;0.00 &nbsp;
-									<button type="submit" class="btn btn-success">Add to Cart</button>
-							</div>
+				<!---Start Rachel -->
+				<div class="product-container">
+					<h2>@p.getName</h2>
+						<div class="product-description">
+							@p.getDescription
+						</div>
+				<div class="addtocart">
+					&euro; @("%.2f".format(p.getPrice)) &nbsp;
+				<a class="btn btn-success" href="">Buy Now</a>
 			</div>
-			@* End Rachel *@
+			</div>
+		</div>
+	} else {
+		<h2>Product Not Found</h2>
+	}
 }

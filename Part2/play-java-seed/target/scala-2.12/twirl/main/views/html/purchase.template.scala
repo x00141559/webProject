@@ -76,10 +76,10 @@ Seq[Any](format.raw/*1.59*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 15:54:01 GMT 2017
-                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/purchase.scala.html
-                  HASH: f69059f1ceef4dd2f83c50e65e6ee13248033ae2
-                  MATRIX: 974->1|1126->58|1154->61|1183->82|1222->84|1253->106|1283->110|2172->987|2204->989
+                  DATE: Mon Dec 18 23:12:02 GMT 2017
+                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/purchase.scala.html
+                  HASH: 42f5de559e5916e464bdb5618ab87b34a9e4829e
+                  MATRIX: 974->1|1126->58|1156->63|1185->84|1224->86|1256->109|1287->114|2200->1015|2233->1018
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|61->29|62->30
                   -- GENERATED --
               */

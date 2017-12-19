@@ -22,46 +22,43 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object product extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
+object product extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[models.Product,models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(product: String, user: models.users.User)(content:Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(p: models.Product, user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.58*/("""
+Seq[Any](format.raw/*1.46*/("""
 
-"""),_display_(/*3.2*/main("Product",user)/*3.22*/ {_display_(Seq[Any](format.raw/*3.24*/("""
-			"""),format.raw/*4.22*/("""
+"""),_display_(/*3.2*/main("Product", user)/*3.23*/ {_display_(Seq[Any](format.raw/*3.25*/("""
+	"""),_display_(/*4.3*/if(p != null)/*4.16*/ {_display_(Seq[Any](format.raw/*4.18*/("""
 			"""),format.raw/*5.4*/("""<div class="container-fluid">
-					<!---Start Rachel -->
-					<div class="product-container">
-							<h2>Product</h2>
-							<div class="product-img">
-									image goes here
-							</div>
-							<div class="product-description">
-									Lorem ipsum dolor sit amet, duo eu appareat vulputate, ut vis agam platonem. 
-									Summo ludus maiorum sed et, usu habeo offendit disputando ea. Altera adipiscing sea in, natum tibique an qui. Pri amet officiis antiopam id, id his clita tamquam iracundia. Sensibus platonem scribentur vel ea. Ex duo appareat intellegat.
-									Persius nominavi pertinax ad pri. Ei latine accusata cum. Oratio decore reprimique ut per, possim copiosae te nec. Inermis nominati has no.
-									Postea sapientem eam eu. Ridens definiebas an quo, porro aliquam verterem eum id, ferri saperet qui ad. Ad justo summo mundi duo. Facer melius appareat cu est, est ad idque nusquam corpora. Vel in mundi errem scribentur, vix scripta saperet no.
-							</div>
-							<div class="addtocart">
-									&euro;0.00 &nbsp;
-									<button type="submit" class="btn btn-success">Add to Cart</button>
-							</div>
+				<!---Start Rachel -->
+				<div class="product-container">
+					<h2>"""),_display_(/*8.11*/p/*8.12*/.getName),format.raw/*8.20*/("""</h2>
+						<div class="product-description">
+							"""),_display_(/*10.9*/p/*10.10*/.getDescription),format.raw/*10.25*/("""
+						"""),format.raw/*11.7*/("""</div>
+				<div class="addtocart">
+					&euro; """),_display_(/*13.14*/("%.2f".format(p.getPrice))),format.raw/*13.41*/(""" """),format.raw/*13.42*/("""&nbsp;
+				<a class="btn btn-success" href="">Buy Now</a>
 			</div>
-			"""),format.raw/*23.20*/("""
-""")))}),format.raw/*24.2*/("""
+			</div>
+		</div>
+	""")))}/*18.4*/else/*18.9*/{_display_(Seq[Any](format.raw/*18.10*/("""
+		"""),format.raw/*19.3*/("""<h2>Product Not Found</h2>
+	""")))}),format.raw/*20.3*/("""
+""")))}),format.raw/*21.2*/("""
 """))
       }
     }
   }
 
-  def render(product:String,user:models.users.User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(product,user)(content)
+  def render(p:models.Product,user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(p,user)
 
-  def f:((String,models.users.User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (product,user) => (content) => apply(product,user)(content)
+  def f:((models.Product,models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (p,user) => apply(p,user)
 
   def ref: this.type = this
 
@@ -70,11 +67,11 @@ Seq[Any](format.raw/*1.58*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 15:54:01 GMT 2017
-                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/product.scala.html
-                  HASH: 5ec848a2972633ce81ed677ee7eb6099a1149d1d
-                  MATRIX: 973->1|1124->57|1152->60|1180->80|1219->82|1250->104|1280->108|2451->1267|2483->1269
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|55->23|56->24
+                  DATE: Tue Dec 19 00:32:00 GMT 2017
+                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/product.scala.html
+                  HASH: bdb7369e2332d80ac8cf2dac5c4238b2b5232f1c
+                  MATRIX: 976->1|1115->45|1145->50|1174->71|1213->73|1242->77|1263->90|1302->92|1333->97|1464->202|1473->203|1501->211|1583->267|1593->268|1629->283|1664->291|1741->341|1789->368|1818->369|1930->464|1942->469|1981->470|2012->474|2072->504|2105->507
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|36->4|36->4|37->5|40->8|40->8|40->8|42->10|42->10|42->10|43->11|45->13|45->13|45->13|50->18|50->18|50->18|51->19|52->20|53->21
                   -- GENERATED --
               */
           

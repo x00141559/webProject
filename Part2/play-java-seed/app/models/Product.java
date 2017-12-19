@@ -56,6 +56,10 @@ public class Product extends Model {
 
     }
 
+    public static Product findById(Long id) {
+        return find.byId(id);
+    }
+
 // Accessor methods
     public Long getId() {
         return id;

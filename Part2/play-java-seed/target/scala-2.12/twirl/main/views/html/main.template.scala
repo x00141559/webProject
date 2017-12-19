@@ -25,12 +25,12 @@ import play.core.j.PlayFormsMagicForJava._
 object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /* Start Jordan */
-  def apply/*2.2*/(title: String,user : models.users.User)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*2.2*/(title: String, user : models.users.User)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*2.57*/("""
+Seq[Any](format.raw/*2.58*/("""
 
 """),format.raw/*4.1*/("""<!DOCTYPE html>
 <html lang="en">
@@ -56,17 +56,12 @@ Seq[Any](format.raw/*2.57*/("""
                         <li """),_display_(/*25.30*/if(title == "About")/*25.50*/{_display_(Seq[Any](format.raw/*25.51*/("""class="active"""")))}),format.raw/*25.66*/("""><a href="/about" style="color: #00d7d7">About</a></li>
                         <li """),_display_(/*26.30*/if(title == "Products")/*26.53*/{_display_(Seq[Any](format.raw/*26.54*/("""class="active"""")))}),format.raw/*26.69*/("""><a href="/products" style="color: #00d7d7">Products</a></li>
                         <li """),_display_(/*27.30*/if(title=="Login")/*27.48*/{_display_(Seq[Any](format.raw/*27.49*/("""class="active"""")))}),format.raw/*27.64*/(""">
-								<a href=""""),_display_(/*28.19*/routes/*28.25*/.LoginController.login()),format.raw/*28.49*/("""" style="color: #00d7d7">Login</a>
-                        </li>
-                    </li>
-                    <li """),_display_(/*31.26*/if(title=="Login")/*31.44*/{_display_(Seq[Any](format.raw/*31.45*/("""class="active"""")))}),format.raw/*31.60*/(""">
-                        """),_display_(/*32.26*/if(user != null)/*32.42*/ {_display_(Seq[Any](format.raw/*32.44*/("""
-                            """),format.raw/*33.29*/("""<a href=""""),_display_(/*33.39*/routes/*33.45*/.LoginController.logout()),format.raw/*33.70*/(""""></a><a href="/" style="color: #00d7d7">Home</a>>Logout """),_display_(/*33.128*/user/*33.132*/.getName()),format.raw/*33.142*/("""</a>
-                        """)))}/*34.27*/else/*34.32*/{_display_(Seq[Any](format.raw/*34.33*/("""
-                            """),format.raw/*35.29*/("""<a href=""""),_display_(/*35.39*/routes/*35.45*/.LoginController.login()),format.raw/*35.69*/("""">Login</a>
-                        """)))}),format.raw/*36.26*/("""
-    
-                    """),format.raw/*38.21*/("""</li>
+                                """),_display_(/*28.34*/if(user != null)/*28.50*/ {_display_(Seq[Any](format.raw/*28.52*/("""
+                                    """),format.raw/*29.37*/("""<a href=""""),_display_(/*29.47*/routes/*29.53*/.LoginController.logout()),format.raw/*29.78*/("""" style="color: #00d7d7">Logout """),_display_(/*29.111*/user/*29.115*/.getName()),format.raw/*29.125*/("""</a>
+                                """)))}/*30.35*/else/*30.40*/{_display_(Seq[Any](format.raw/*30.41*/("""
+                                    """),format.raw/*31.37*/("""<a href=""""),_display_(/*31.47*/routes/*31.53*/.LoginController.login()),format.raw/*31.77*/("""" style="color: #00d7d7">Login</a>
+                                """)))}),format.raw/*32.34*/("""
+                        """),format.raw/*33.25*/("""</li>
                 </ul>
                     </ul>
                       <form class="navbar-form navbar-left pull-right">
@@ -82,8 +77,8 @@ Seq[Any](format.raw/*2.57*/("""
                     </div>
                 </nav>
                 <main>
-                    """),_display_(/*54.22*/content),format.raw/*54.29*/("""
-                """),format.raw/*55.17*/("""</main>
+                    """),_display_(/*49.22*/content),format.raw/*49.29*/("""
+                """),format.raw/*50.17*/("""</main>
                 
     </body>
 </html>
@@ -103,11 +98,11 @@ Seq[Any](format.raw/*2.57*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 15:54:01 GMT 2017
-                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/main.scala.html
-                  HASH: e100693b0c82fc1666a77591105f4e2d8b6c96bb
-                  MATRIX: 984->20|1134->75|1162->77|1262->151|1287->156|1727->569|1742->575|1799->611|2058->843|2073->849|2132->887|2579->1307|2607->1326|2646->1327|2692->1342|2798->1421|2827->1441|2866->1442|2912->1457|3024->1542|3056->1565|3095->1566|3141->1581|3259->1672|3286->1690|3325->1691|3371->1706|3418->1726|3433->1732|3478->1756|3621->1872|3648->1890|3687->1891|3733->1906|3787->1933|3812->1949|3852->1951|3909->1980|3946->1990|3961->1996|4007->2021|4093->2079|4107->2083|4139->2093|4188->2124|4201->2129|4240->2130|4297->2159|4334->2169|4349->2175|4394->2199|4462->2236|4516->2262|5282->3001|5310->3008|5355->3025
-                  LINES: 28->2|33->2|35->4|38->7|38->7|42->11|42->11|42->11|44->13|44->13|44->13|55->24|55->24|55->24|55->24|56->25|56->25|56->25|56->25|57->26|57->26|57->26|57->26|58->27|58->27|58->27|58->27|59->28|59->28|59->28|62->31|62->31|62->31|62->31|63->32|63->32|63->32|64->33|64->33|64->33|64->33|64->33|64->33|64->33|65->34|65->34|65->34|66->35|66->35|66->35|66->35|67->36|69->38|85->54|85->54|86->55
+                  DATE: Mon Dec 18 23:14:21 GMT 2017
+                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/main.scala.html
+                  HASH: d3dd4aef0cf8fbee174700ef77fea3d2d8287f8a
+                  MATRIX: 984->21|1135->77|1165->81|1268->158|1293->163|1737->580|1752->586|1809->622|2070->856|2085->862|2144->900|2602->1331|2630->1350|2669->1351|2715->1366|2822->1446|2851->1466|2890->1467|2936->1482|3049->1568|3081->1591|3120->1592|3166->1607|3285->1699|3312->1717|3351->1718|3397->1733|3460->1769|3485->1785|3525->1787|3591->1825|3628->1835|3643->1841|3689->1866|3750->1899|3764->1903|3796->1913|3854->1953|3867->1958|3906->1959|3972->1997|4009->2007|4024->2013|4069->2037|4169->2106|4223->2132|5005->2887|5033->2894|5079->2912
+                  LINES: 28->2|33->2|35->4|38->7|38->7|42->11|42->11|42->11|44->13|44->13|44->13|55->24|55->24|55->24|55->24|56->25|56->25|56->25|56->25|57->26|57->26|57->26|57->26|58->27|58->27|58->27|58->27|59->28|59->28|59->28|60->29|60->29|60->29|60->29|60->29|60->29|60->29|61->30|61->30|61->30|62->31|62->31|62->31|62->31|63->32|64->33|80->49|80->49|81->50
                   -- GENERATED --
               */
           

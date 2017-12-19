@@ -66,16 +66,9 @@ main {
     background-color:#545454;
     color:white;
 }
-.product-img{
-    float:left;
-}
-.product-description{
-    float:right;
-    width:50%;
-}
 
 .addtocart {
-    position: absolute;
+    padding-top: 2em;
     bottom: 110px;
 }
 

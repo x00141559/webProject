@@ -1,5 +1,5 @@
 @* Start Jordan *@
-@(title: String,user : models.users.User)(content: Html)
+@(title: String, user : models.users.User)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,17 +25,12 @@
                         <li @if(title == "About"){class="active"}><a href="/about" style="color: #00d7d7">About</a></li>
                         <li @if(title == "Products"){class="active"}><a href="/products" style="color: #00d7d7">Products</a></li>
                         <li @if(title=="Login"){class="active"}>
-								<a href="@routes.LoginController.login()" style="color: #00d7d7">Login</a>
+                                @if(user != null) {
+                                    <a href="@routes.LoginController.logout()" style="color: #00d7d7">Logout @user.getName()</a>
+                                } else {
+                                    <a href="@routes.LoginController.login()" style="color: #00d7d7">Login</a>
+                                }
                         </li>
-                    </li>
-                    <li @if(title=="Login"){class="active"}>
-                        @if(user != null) {
-                            <a href="@routes.LoginController.logout()"></a><a href="/" style="color: #00d7d7">Home</a>>Logout @user.getName()</a>
-                        } else {
-                            <a href="@routes.LoginController.login()">Login</a>
-                        }
-    
-                    </li>
                 </ul>
                     </ul>
                       <form class="navbar-form navbar-left pull-right">

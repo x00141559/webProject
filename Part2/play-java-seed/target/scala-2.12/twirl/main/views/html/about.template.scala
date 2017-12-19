@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object about extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
+object about extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(about: String, user: models.users.User)(content:Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.56*/("""
+Seq[Any](format.raw/*1.27*/("""
 
 """),_display_(/*3.2*/main("About",user)/*3.20*/ {_display_(Seq[Any](format.raw/*3.22*/("""
 			"""),format.raw/*4.21*/("""
@@ -73,9 +73,9 @@ Seq[Any](format.raw/*1.56*/("""
     }
   }
 
-  def render(about:String,user:models.users.User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(about,user)(content)
+  def render(user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(user)
 
-  def f:((String,models.users.User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (about,user) => (content) => apply(about,user)(content)
+  def f:((models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (user) => apply(user)
 
   def ref: this.type = this
 
@@ -84,10 +84,10 @@ Seq[Any](format.raw/*1.56*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 15:54:01 GMT 2017
-                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/about.scala.html
-                  HASH: cf1df186c26592ac7c3e597b226ad5c9f78af2a6
-                  MATRIX: 971->1|1120->55|1148->58|1174->76|1213->78|1244->99|1274->103|1420->223|1434->229|1496->271|2524->1287|2556->1289
+                  DATE: Tue Dec 19 00:03:05 GMT 2017
+                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/about.scala.html
+                  HASH: 72a0d681b2975ba55e02ebdd00699289e4aaafda
+                  MATRIX: 959->1|1079->26|1109->31|1135->49|1174->51|1206->73|1237->78|1385->200|1399->206|1461->248|2519->1294|2552->1297
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|39->7|39->7|39->7|69->37|70->38
                   -- GENERATED --
               */

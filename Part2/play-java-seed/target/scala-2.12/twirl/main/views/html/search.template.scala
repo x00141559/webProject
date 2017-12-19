@@ -46,15 +46,15 @@ Seq[Any](format.raw/*1.74*/("""
 									<div id="collapse"""),_display_(/*14.28*/p/*14.29*/.getId),format.raw/*14.35*/("""" class="panel-collapse collapse">
 											<div class="panel-body">
 													"""),_display_(/*16.15*/p/*16.16*/.getDescription),format.raw/*16.31*/("""
-											"""),format.raw/*17.12*/("""</div>
-											<div class="panel-footer">&euro; """),_display_(/*18.46*/("%.2f".format(p.getPrice))),format.raw/*18.73*/(""" """),format.raw/*18.74*/("""&nbsp;
-													<button class="btn btn-success" type="submit">Buy Now</button>
-											</div>
-									</div>
-									</div>
+									"""),format.raw/*17.10*/("""</div>
+										<div class="panel-footer">&euro; """),_display_(/*18.45*/("%.2f".format(p.getPrice))),format.raw/*18.72*/(""" """),format.raw/*18.73*/("""&nbsp;
+										<button class="btn btn-success" type="submit">Buy Now</button>
 								</div>
-							</br>
-						""")))}),format.raw/*25.8*/("""
+							</div>
+						</div>
+					</div>
+				</br>
+			""")))}),format.raw/*25.5*/("""
 	"""),format.raw/*26.2*/("""</div>
 """),format.raw/*27.17*/("""
 """)))}),format.raw/*28.2*/("""
@@ -74,10 +74,10 @@ Seq[Any](format.raw/*1.74*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 15:54:01 GMT 2017
-                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/search.scala.html
-                  HASH: 0abd58a23abd209627c5d12d4dfa4e09956c639e
-                  MATRIX: 988->1|1155->73|1183->76|1210->95|1249->97|1278->117|1308->121|1374->161|1399->166|1434->176|1467->194|1505->195|1536->200|1770->407|1780->408|1807->414|1837->417|1847->418|1876->426|1967->490|1977->491|2004->497|2116->582|2126->583|2162->598|2202->610|2281->662|2329->689|2358->690|2556->858|2585->860|2620->883|2652->885
+                  DATE: Tue Dec 19 00:16:07 GMT 2017
+                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/search.scala.html
+                  HASH: 3be2d2d4a3294f6be407d1f5e923c5f1e7de44e0
+                  MATRIX: 988->1|1155->73|1185->78|1212->97|1251->99|1281->120|1312->125|1378->165|1403->170|1439->181|1472->199|1510->200|1542->206|1780->417|1790->418|1817->424|1847->427|1857->428|1886->436|1980->503|1990->504|2017->510|2131->597|2141->598|2177->613|2216->624|2295->676|2343->703|2372->704|2557->859|2587->862|2623->886|2656->889
                   LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|38->6|38->6|39->7|43->11|43->11|43->11|43->11|43->11|43->11|46->14|46->14|46->14|48->16|48->16|48->16|49->17|50->18|50->18|50->18|57->25|58->26|59->27|60->28
                   -- GENERATED --
               */
