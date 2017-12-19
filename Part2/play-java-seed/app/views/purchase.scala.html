@@ -1,30 +1,38 @@
-@(purchase: String, user: models.users.User)(content:Html)
+@(p: models.Product, user: models.users.User)
 
 @main("Purchase",user) {
-			@* Start Rachel *@
-			<div class="container-fluid">
-					<h2>Purchase</h2>
-					<p> Here is a summary of your order</p>
-					<p>To continue with the purchase please enter your details in the form below</p>
-			 <form>
-					<div class="form-group">
-						<label for="name">Name:</label>
-						<input type="name" class="form-control" id="name">
-					</div>
-					<div class="form-group">
-						<label for="cardno">Card Number:</label>
-						<input type="cardno" class="form-control" id="cardno">
-					</div>
-					<div class="form-group">
-						<label for="ccn">CCN Number:</label>
-						<input type="password" class="form-control" id="ccn">
-					</div>
-					<div class="form-group">
-						<label for="email">Email:</label>
-						<input type="email" class="form-control" id="email">
-					</div>
-					<button type="submit" class="btn btn-success">Submit</button>
-				</form>
+		@* Start Rachel *@
+		<div class="container-fluid">
+				<h2>Purchase</h2>
+				<p> Here is a summary of your order</p>
+				@if(p != null) {
+					<div class="container-fluid">
+						<!---Start Rachel -->
+						<div class="product-container">
+							<h4>@p.getName,&nbsp;&nbsp;&nbsp;&euro;@("%.2f".format(p.getPrice))</h4>
+						</div>
 				</div>
-			@* End Rachel *@
+					<form>
+						<div class="form-group col-md-12">
+							<label for="name">Name:</label>
+							<input type="name" class="form-control" id="name">
+						</div>
+						<div class="form-group col-md-8">
+							<label for="cardno">Card Number:</label>
+							<input type="cardno" class="form-control" id="cardno">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="ccn">CCN Number:</label>
+							<input type="password" class="form-control" id="ccn">
+						</div>
+						&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="purchase()" class="btn btn-success">Purchase</a>
+						<div class="container-fluid hidden">
+							<h2>Thank you for your purchase!</h2>
+						</div>
+					</form>
+				} else {
+					<h2>Product Not Found</h2>
+				}
+		</div>
+	@* End Rachel *@
 }

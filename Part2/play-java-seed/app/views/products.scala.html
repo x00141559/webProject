@@ -21,7 +21,7 @@
 							@p.getDescription
 						</div>
 						<div class="panel-footer">&euro; @("%.2f".format(p.getPrice)) &nbsp;
-								<a class="btn btn-success" href="">Buy Now</a>
+								<a class="btn btn-success" href="@routes.HomeController.purchase(p.getId)">Buy Now</a>
 								<a class="btn btn-info" href="@routes.HomeController.product(p.getId)">
 									<span class="glyphicon glyphicon-open"></span>
 								</a>

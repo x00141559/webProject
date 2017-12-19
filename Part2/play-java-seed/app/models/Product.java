@@ -10,7 +10,7 @@ import play.data.validation.*;
 @Entity
 public class Product extends Model {
 
-// Properties
+    // Properties
     @Id
     private Long id;
     
@@ -26,12 +26,12 @@ public class Product extends Model {
     @Constraints.Required
     private double price;
 
-// Default Constructor
+    // Default Constructor
     public Product() {
 
     }
 
-// Constructor to initialise object
+    // Constructor to initialise object
     public Product(Long id, String name, String description, int stock, double price) {
 
         this.id = id;
@@ -60,7 +60,7 @@ public class Product extends Model {
         return find.byId(id);
     }
 
-// Accessor methods
+    // Accessor methods
     public Long getId() {
         return id;
     }

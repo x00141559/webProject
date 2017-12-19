@@ -33,52 +33,51 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](format.raw/*1.60*/("""
 
 """),_display_(/*3.2*/main("Home",user)/*3.19*/ {_display_(Seq[Any](format.raw/*3.21*/("""
-					"""),format.raw/*4.23*/("""
-					"""),format.raw/*5.6*/("""<div id="myCarousel" class="carousel slide" data-ride="carousel">
-							<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#myCarousel" data-slide-to="1"></li>
-				
-							<li data-target="#myCarousel" data-slide-to="2"></li>
-							</ol>
+			"""),format.raw/*4.4*/("""<div class="container-fluid">
+				<h1>Welcome to Software.ie</h1>
+			</div>
+			
+			"""),format.raw/*8.21*/("""
+			"""),format.raw/*9.4*/("""<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
 	
-							<div class="carousel-inner">
-							<div class="item active">
-								<img src=""""),_display_(/*15.20*/routes/*15.26*/.Assets.versioned("images/windows2.jpg")),format.raw/*15.66*/("""" alt="Example 1">
-							</div>
+				<div class="carousel-inner">
+				<div class="item active">
+				<img src=""""),_display_(/*18.16*/routes/*18.22*/.Assets.versioned("images/windows2.jpg")),format.raw/*18.62*/("""" alt="Example 1">
+				</div>
 	
-							<div class="item">
-								<img src=""""),_display_(/*19.20*/routes/*19.26*/.Assets.versioned("images/windows1.jpg")),format.raw/*19.66*/("""" alt="Example 2">
-							</div>
+				<div class="item">
+				<img src=""""),_display_(/*22.16*/routes/*22.22*/.Assets.versioned("images/windows1.jpg")),format.raw/*22.62*/("""" alt="Example 2">
+				</div>
 	
-							<div class="item">
-							 <img src=""""),_display_(/*23.20*/routes/*23.26*/.Assets.versioned("images/key2.jpg")),format.raw/*23.62*/("""" alt="Example 3">
-							</div>
-								 <div class="item">
-							 <img src=""""),_display_(/*26.20*/routes/*26.26*/.Assets.versioned("images/key1.jpg")),format.raw/*26.62*/("""" alt="Example 4">
-							</div>
-							</div>
+				<div class="item">
+				 <img src=""""),_display_(/*26.17*/routes/*26.23*/.Assets.versioned("images/key2.jpg")),format.raw/*26.59*/("""" alt="Example 3">
+				</div>
+				 <div class="item">
+				 <img src=""""),_display_(/*29.17*/routes/*29.23*/.Assets.versioned("images/key1.jpg")),format.raw/*29.59*/("""" alt="Example 4">
+				</div>
+				</div>
 
-							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left"></span>
-							<span class="sr-only">Previous</span>
-							</a>
-							<a class="right carousel-control" href="#myCarousel" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right"></span>
-							<span class="sr-only">Next</span>
-							</a>
-						</div>
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+				</a>
+			</div>
 
-						<div class="container-fluid">
-								<h2>Featured Product</h2>
-								<h4>This weeks featured Product:</h4>
-								<img src=""""),_display_(/*43.20*/routes/*43.26*/.Assets.versioned("images/Example1.png")),format.raw/*43.66*/("""" alt="Example 1">
-								<p>Key Type: Gaming</p>
-								<p>Price: €40.00</p>
-					  </div>
-					</div>
-					"""),format.raw/*48.21*/("""
-""")))}),format.raw/*49.2*/("""
+			<div class="container-fluid">
+				<h4>To start shopping you can click "Products" to See all Products or Search for something you want</h4>
+				<h4>Software.ie is a premium liscensed reseller of Software keys since 2017</h4>
+			</div>
+			"""),format.raw/*47.19*/("""
+""")))}),format.raw/*48.2*/("""
 """))
       }
     }
@@ -95,11 +94,11 @@ Seq[Any](format.raw/*1.60*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 23:12:02 GMT 2017
+                  DATE: Tue Dec 19 18:23:43 GMT 2017
                   SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/index.scala.html
-                  HASH: 7eedecdd6b7a3142a79c5d2fb048df1a07d9514c
-                  MATRIX: 980->1|1133->59|1163->64|1188->81|1227->83|1261->107|1294->114|1743->536|1758->542|1819->582|1930->666|1945->672|2006->712|2117->796|2132->802|2189->838|2299->921|2314->927|2371->963|3004->1569|3019->1575|3080->1615|3224->1746|3257->1749
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|47->15|47->15|47->15|51->19|51->19|51->19|55->23|55->23|55->23|58->26|58->26|58->26|75->43|75->43|75->43|80->48|81->49
+                  HASH: 2ebba4198e086e703113e71cb83735d4a2506faf
+                  MATRIX: 980->1|1133->59|1163->64|1188->81|1227->83|1258->88|1372->192|1403->197|1821->588|1836->594|1897->634|1998->708|2013->714|2074->754|2176->829|2191->835|2248->871|2348->944|2363->950|2420->986|3127->1680|3160->1683
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|40->8|41->9|50->18|50->18|50->18|54->22|54->22|54->22|58->26|58->26|58->26|61->29|61->29|61->29|79->47|80->48
                   -- GENERATED --
               */
           

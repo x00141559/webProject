@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
-// @DATE:Tue Dec 19 00:27:27 GMT 2017
+// @DATE:Tue Dec 19 17:35:48 GMT 2017
 
 package controllers;
 

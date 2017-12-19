@@ -25,13 +25,13 @@ import play.core.j.PlayFormsMagicForJava._
 object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.users.Login],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(loginForm: Form[models.users.Login],user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(loginForm: Form[models.users.Login], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*2.2*/import helper._
 
 
-Seq[Any](format.raw/*1.63*/("""
+Seq[Any](format.raw/*1.64*/("""
 """),format.raw/*3.1*/("""
 """),_display_(/*4.2*/main("Login",user)/*4.20*/ {_display_(Seq[Any](format.raw/*4.22*/("""
     """),format.raw/*5.5*/("""<div class="container-fluid">
@@ -80,10 +80,10 @@ Seq[Any](format.raw/*1.63*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 23:12:02 GMT 2017
+                  DATE: Tue Dec 19 18:05:01 GMT 2017
                   SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/login.scala.html
-                  HASH: 3cb322d197ad97159f3d53ef075f60f085e42c5d
-                  MATRIX: 984->1|1118->65|1163->62|1191->82|1219->85|1245->103|1284->105|1316->111|1449->217|1487->246|1527->248|1569->262|1646->312|1664->321|1705->341|1747->355|1793->370|1831->381|1870->411|1910->413|1952->427|2029->477|2043->482|2085->503|2127->517|2173->532|2211->543|2226->549|2299->613|2339->615|2381->630|2394->634|2425->644|2467->658|2537->701|2679->822|2721->836|2811->899|2963->1030|3005->1044|3190->1198|3223->1204
+                  HASH: cf53525e52909a8d27ed1bf38e818c1639c5e928
+                  MATRIX: 984->1|1119->66|1164->63|1192->83|1220->86|1246->104|1285->106|1317->112|1450->218|1488->247|1528->249|1570->263|1647->313|1665->322|1706->342|1748->356|1794->371|1832->382|1871->412|1911->414|1953->428|2030->478|2044->483|2086->504|2128->518|2174->533|2212->544|2227->550|2300->614|2340->616|2382->631|2395->635|2426->645|2468->659|2538->702|2680->823|2722->837|2812->900|2964->1031|3006->1045|3191->1199|3224->1205
                   LINES: 28->1|31->2|34->1|35->3|36->4|36->4|36->4|37->5|42->10|42->10|42->10|43->11|44->12|44->12|44->12|45->13|46->14|47->15|47->15|47->15|48->16|49->17|49->17|49->17|50->18|51->19|52->20|52->20|52->20|52->20|53->21|53->21|53->21|54->22|55->23|56->24|57->25|59->27|60->28|61->29|65->33|66->34
                   -- GENERATED --
               */

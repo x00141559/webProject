@@ -34,26 +34,36 @@ object addProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api
 Seq[Any](format.raw/*1.62*/("""
 """),format.raw/*3.1*/("""
 """),_display_(/*4.2*/main("Add Product", user)/*4.27*/ {_display_(Seq[Any](format.raw/*4.29*/("""
-    """),format.raw/*5.5*/("""<div class="container fluid">
+    """),format.raw/*5.5*/("""<div class="container fluid col-md-12">
         <h2>Add a new product</h2>
-        """),_display_(/*7.10*/form(action=routes.HomeController.addProductSubmit(), 'class -> "form-horizontal", 'role -> "form")/*7.109*/ {_display_(Seq[Any](format.raw/*7.111*/("""
+        """),_display_(/*7.10*/helper/*7.16*/.form(action = controllers.routes.HomeController.addProductSubmit())/*7.84*/ {_display_(Seq[Any](format.raw/*7.86*/("""
             """),_display_(/*8.14*/CSRF/*8.18*/.formField),format.raw/*8.28*/("""
-
-            """),_display_(/*10.14*/inputText(productForm("name"), '_label -> "Name", 'class -> "form-control")),format.raw/*10.89*/("""
-            """),_display_(/*11.14*/inputText(productForm("stock"), '_label -> "Stock", 'class -> "form-control")),format.raw/*11.91*/("""
-            """),_display_(/*12.14*/inputText(productForm("price"), '_label -> "Price", 'class -> "form-control")),format.raw/*12.91*/("""
-
-            """),_display_(/*14.14*/inputText(productForm("id"), '_label -> "", 'hidden -> "hidden")),format.raw/*14.78*/("""
-
-            """),format.raw/*16.13*/("""<div class="actions">
+            """),format.raw/*9.13*/("""<div class="form-group">
+                """),_display_(/*10.18*/inputText(productForm("name"), '_label -> "Name",
+                'class -> "form-control")),format.raw/*11.42*/("""
+            """),format.raw/*12.13*/("""</div>
+            <div class="form-group">
+                """),_display_(/*14.18*/inputText(productForm("description"), '_label -> "Description",
+                'class -> "form-control")),format.raw/*15.42*/("""
+            """),format.raw/*16.13*/("""</div>
+            <div class="form-group">
+                """),_display_(/*18.18*/inputText(productForm("stock"), '_label -> "Stock",
+                'class -> "form-control")),format.raw/*19.42*/("""
+            """),format.raw/*20.13*/("""</div>
+            <div class="form-group">
+                """),_display_(/*22.18*/inputText(productForm("price"), '_label -> "Price",
+                'class -> "form-control")),format.raw/*23.42*/("""
+            """),format.raw/*24.13*/("""</div>
+            """),_display_(/*25.14*/inputText(productForm("id"), '_label -> "", 'hidden -> "hidden")),format.raw/*25.78*/("""
+            """),format.raw/*26.13*/("""<div class="form-group">
                 <input type="submit" value="Add/Update Product" class="btn btn-primary">
-                <a href=""""),_display_(/*18.27*/routes/*18.33*/.HomeController.products()),format.raw/*18.59*/("""">
+                <a href=""""),_display_(/*28.27*/routes/*28.33*/.HomeController.products()),format.raw/*28.59*/("""">
                     <button type="button" class="btn btn-warning">Cancel</button>
                 </a>
             </div>
-        """)))}),format.raw/*22.10*/("""
-    """),format.raw/*23.5*/("""</div>
-""")))}))
+        """)))}),format.raw/*32.10*/("""
+""")))}),format.raw/*33.2*/("""
+"""))
       }
     }
   }
@@ -69,11 +79,11 @@ Seq[Any](format.raw/*1.62*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 23:58:31 GMT 2017
+                  DATE: Tue Dec 19 18:13:21 GMT 2017
                   SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/addProduct.scala.html
-                  HASH: f6a8ac23085dc375dc848717f5420ad2ff11c5a1
-                  MATRIX: 985->1|1118->64|1163->61|1191->81|1219->84|1252->109|1291->111|1323->117|1425->193|1533->292|1573->294|1614->309|1626->313|1656->323|1700->340|1796->415|1838->430|1936->507|1978->522|2076->599|2120->616|2205->680|2249->696|2415->835|2430->841|2477->867|2646->1005|2679->1011
-                  LINES: 28->1|31->2|34->1|35->3|36->4|36->4|36->4|37->5|39->7|39->7|39->7|40->8|40->8|40->8|42->10|42->10|43->11|43->11|44->12|44->12|46->14|46->14|48->16|50->18|50->18|50->18|54->22|55->23
+                  HASH: 8da0e34a7dab800ef60ad6e1bd478dc5ca5430d7
+                  MATRIX: 985->1|1118->64|1163->61|1191->81|1219->84|1252->109|1291->111|1323->117|1435->203|1449->209|1525->277|1564->279|1605->294|1617->298|1647->308|1688->322|1758->365|1871->457|1913->471|2003->534|2130->640|2172->654|2262->717|2377->811|2419->825|2509->888|2624->982|2666->996|2714->1017|2799->1081|2841->1095|3010->1237|3025->1243|3072->1269|3241->1407|3274->1410
+                  LINES: 28->1|31->2|34->1|35->3|36->4|36->4|36->4|37->5|39->7|39->7|39->7|39->7|40->8|40->8|40->8|41->9|42->10|43->11|44->12|46->14|47->15|48->16|50->18|51->19|52->20|54->22|55->23|56->24|57->25|57->25|58->26|60->28|60->28|60->28|64->32|65->33
                   -- GENERATED --
               */
           

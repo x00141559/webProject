@@ -33,6 +33,7 @@ public class HomeController extends Controller {
         }
         return ok(index.render(productList,User.getUserById(session().get("email"))));
     }
+    
     @Security.Authenticated(Secured.class)
     @With(AuthAdmin.class)
     public Result addProduct(){
@@ -79,6 +80,8 @@ public class HomeController extends Controller {
         }
         return ok(addProduct.render(productForm,User.getUserById(session().get("email"))));
     }
+
+
     public Result products() {
         List<Product> productList = Product.findAll();
         return ok(products.render(productList, User.getUserById(session().get("email"))));
@@ -94,9 +97,10 @@ public class HomeController extends Controller {
         return ok(search.render(query, productList,User.getUserById(session().get("email"))));
     }
 
-    // public Result purchase() {
-    //     return ok(purchase.render(purchase.class,User.getUserById(session().get("email"))));
-    // }
+    public Result purchase(Long id) {
+        Product p = Product.findById(id);
+        return ok(purchase.render(p,User.getUserById(session().get("email"))));
+    }
 
     @Security.Authenticated(Secured.class)
     @With(AuthAdmin.class)

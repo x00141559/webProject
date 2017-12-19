@@ -58,6 +58,10 @@ main {
     position: absolute;
 }
 
+#myCarousel {
+    height: 30%;
+}
+
 /* End Jordan */
 
 /*Start Rachel*/

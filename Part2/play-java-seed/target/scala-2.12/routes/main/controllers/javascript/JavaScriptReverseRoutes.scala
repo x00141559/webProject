@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
-// @DATE:Tue Dec 19 00:27:27 GMT 2017
+// @DATE:Tue Dec 19 17:35:48 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -110,9 +110,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:10
+    def purchase: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.purchase",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "purchase" + _qS([(id0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id", id0))])})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:11
+  // @LINE:12
   class ReverseLoginController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -120,7 +130,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:12
+    // @LINE:13
     def loginSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.LoginController.loginSubmit",
       """
@@ -134,7 +144,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
+    // @LINE:15
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.LoginController.logout",
       """
@@ -144,7 +154,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:12
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.LoginController.login",
       """
@@ -156,7 +166,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:18
+  // @LINE:19
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -164,7 +174,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:18
+    // @LINE:19
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

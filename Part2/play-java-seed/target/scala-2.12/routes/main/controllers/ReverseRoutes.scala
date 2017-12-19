@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
-// @DATE:Tue Dec 19 00:27:27 GMT 2017
+// @DATE:Tue Dec 19 17:35:48 GMT 2017
 
 import play.api.mvc.Call
 
@@ -73,21 +73,27 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "addProduct")
     }
   
+    // @LINE:10
+    def purchase(id:Long = 0L): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "purchase" + play.core.routing.queryString(List(if(id == 0L) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)))))
+    }
+  
   }
 
-  // @LINE:11
+  // @LINE:12
   class ReverseLoginController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:12
+    // @LINE:13
     def loginSubmit(): Call = {
     
       () match {
       
-        // @LINE:12
+        // @LINE:13
         case ()  =>
           
           Call("POST", _prefix + { _defaultPrefix } + "loginSubmit")
@@ -96,13 +102,13 @@ package controllers {
     
     }
   
-    // @LINE:14
+    // @LINE:15
     def logout(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:11
+    // @LINE:12
     def login(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "login")
@@ -110,14 +116,14 @@ package controllers {
   
   }
 
-  // @LINE:18
+  // @LINE:19
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:18
+    // @LINE:19
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
