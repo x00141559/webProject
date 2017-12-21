@@ -14,6 +14,5 @@ Pages:
 	ProductList - Jordan
 	
 Extra Details:
-	Incorpation into play was done by Jordan such as the creation of a main template,
-	Route configuration and editing the basic html files so they would work in a play
-	framweork project.
+We all worked togther in lab on play, we sat beside each other in lab.
+Work was evenly divided and was a great team spirit.
