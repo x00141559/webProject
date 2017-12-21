@@ -2,7 +2,7 @@
 
 @main("Home",user) {
 			<div class="container-fluid">
-				<h1>Welcome to Software.ie</h1>
+				<h1></h1>
 			</div>
 			
 			@* Start Aoife *@
@@ -40,9 +40,67 @@
 				</a>
 			</div>
 
-			<div class="container-fluid">
-				<h4>To start shopping you can click "Products" to See all Products or Search for something you want</h4>
-				<h4>Software.ie is a premium liscensed reseller of Software keys since 2017</h4>
-			</div>
+			<html lang="en">
+				<head>
+				  <title>Bootstrap Example</title>
+				  <meta charset="utf-8">
+				  <meta name="viewport" content="width=device-width, initial-scale=1">
+				  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				</head>
+				<body>
+				
+				<div class="jumbotron text-center">
+				  <h1> Welcome to Software.ie</h1>
+				  <p></p> 
+				</div>
+				  
+				<div class="container">
+				  <div class="row">
+					<div class="col-sm-4">
+					  <h3>Purchase Products</h3>
+					  <p>Click Purchase to buy now</p>
+					
+					</div>
+					<div class="col-sm-4">
+					  <h3>Login Details</h3>
+					  <p>To log in you must be admin</p>
+					  <p>Login to update and delete Products</p>
+					</div>
+					<div class="col-sm-4">
+					  <h3>This weeks offer</h3> 
+					  <p>Destiny 4 only 79.99 Euro.</p>
+					  <p>Get it while its hot</p>
+					</div>
+				  </div>
+				  <!DOCTYPE html>
+				  <html lang="en">
+				  <head>
+					<title>Bootstrap Example</title>
+					<meta charset="utf-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				  </head>
+				  <body>
+				  
+				  <div class="container">
+					<h3>Not a member?</h3>
+					<p>Sign in below for offers and more.</p>
+					<a href="/login" data-toggle="tooltip" title="Login/SignUp">Sign up/Login</a>
+				  </div>
+				  
+				  <script>
+				  $(document).ready(function(){
+					  $('[data-toggle="tooltip"]').tooltip();   
+				  });
+				  </script>
+				  
+				  </body>
+				  </html>
+				  
+				</div>
 			@* End Aoife *@
 }

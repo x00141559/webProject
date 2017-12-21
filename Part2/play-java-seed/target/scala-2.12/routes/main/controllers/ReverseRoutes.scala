@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
-// @DATE:Tue Dec 19 17:35:48 GMT 2017
+// @SOURCE:/home/wdd/webapps/webProject/Part2/play-java-seed/conf/routes
+// @DATE:Thu Dec 21 14:01:24 GMT 2017
 
 import play.api.mvc.Call
 
@@ -22,7 +22,7 @@ package controllers {
     // @LINE:3
     def addProductSubmit(): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "addProductSubmit")
+      Call("GET", _prefix + { _defaultPrefix } + "addProductSubmit")
     }
   
     // @LINE:6
@@ -34,7 +34,7 @@ package controllers {
     // @LINE:4
     def deleteProduct(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "delProduct/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+      Call("GET", _prefix + { _defaultPrefix } + "deleteProduct/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
     // @LINE:7

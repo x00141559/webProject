@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
-// @DATE:Tue Dec 19 17:35:48 GMT 2017
+// @SOURCE:/home/wdd/webapps/webProject/Part2/play-java-seed/conf/routes
+// @DATE:Thu Dec 21 14:01:24 GMT 2017
 
 package router
 
@@ -46,8 +46,8 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index(cat:Long ?= 0L)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProduct""", """controllers.HomeController.addProduct"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProductSubmit""", """controllers.HomeController.addProductSubmit"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delProduct/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteProduct(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProductSubmit""", """controllers.HomeController.addProductSubmit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """deleteProduct/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteProduct(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateProduct/""" + "$" + """id<[^/]+>""", """controllers.HomeController.updateProduct(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.HomeController.search(query:String ?= "All")"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """products""", """controllers.HomeController.products"""),
@@ -103,7 +103,7 @@ class Routes(
   )
 
   // @LINE:3
-  private[this] lazy val controllers_HomeController_addProductSubmit2_route = Route("POST",
+  private[this] lazy val controllers_HomeController_addProductSubmit2_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addProductSubmit")))
   )
   private[this] lazy val controllers_HomeController_addProductSubmit2_invoker = createInvoker(
@@ -113,7 +113,7 @@ class Routes(
       "controllers.HomeController",
       "addProductSubmit",
       Nil,
-      "POST",
+      "GET",
       this.prefix + """addProductSubmit""",
       """""",
       Seq()
@@ -122,7 +122,7 @@ class Routes(
 
   // @LINE:4
   private[this] lazy val controllers_HomeController_deleteProduct3_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("delProduct/"), DynamicPart("id", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("deleteProduct/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_HomeController_deleteProduct3_invoker = createInvoker(
     HomeController_0.deleteProduct(fakeValue[Long]),
@@ -132,7 +132,7 @@ class Routes(
       "deleteProduct",
       Seq(classOf[Long]),
       "GET",
-      this.prefix + """delProduct/""" + "$" + """id<[^/]+>""",
+      this.prefix + """deleteProduct/""" + "$" + """id<[^/]+>""",
       """""",
       Seq()
     )

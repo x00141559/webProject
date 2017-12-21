@@ -36,13 +36,14 @@ Seq[Any](format.raw/*1.46*/("""
 		"""),format.raw/*4.21*/("""
 		"""),format.raw/*5.3*/("""<div class="container-fluid">
 				<h2>Purchase</h2>
-				<p> Here is a summary of your order</p>
+				<strong><p> Here is a summary of your order</p></strong>
 				"""),_display_(/*8.6*/if(p != null)/*8.19*/ {_display_(Seq[Any](format.raw/*8.21*/("""
 					"""),format.raw/*9.6*/("""<div class="container-fluid">
 						<!---Start Rachel -->
 						<div class="product-container">
 							<h4>"""),_display_(/*12.13*/p/*12.14*/.getName),format.raw/*12.22*/(""",&nbsp;&nbsp;&nbsp;&euro;"""),_display_(/*12.48*/("%.2f".format(p.getPrice))),format.raw/*12.75*/("""</h4>
 						</div>
+					<strong><p>To continue with your purchase please enter your details below</p></strong>	
 				</div>
 					<form>
 						<div class="form-group col-md-12">
@@ -62,12 +63,34 @@ Seq[Any](format.raw/*1.46*/("""
 							<h2>Thank you for your purchase!</h2>
 						</div>
 					</form>
-				""")))}/*33.7*/else/*33.12*/{_display_(Seq[Any](format.raw/*33.13*/("""
-					"""),format.raw/*34.6*/("""<h2>Product Not Found</h2>
-				""")))}),format.raw/*35.6*/("""
-		"""),format.raw/*36.3*/("""</div>
-	"""),format.raw/*37.18*/("""
-""")))}),format.raw/*38.2*/("""
+					<!DOCTYPE html>
+					<html lang="en">
+					<head>
+					  <title>Bootstrap Example</title>
+					  <meta charset="utf-8">
+					  <meta name="viewport" content="width=device-width, initial-scale=1">
+					  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+					  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+					  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+					</head>
+					<body>
+					
+					<div class="container">
+					  <h3>Continue Browsing</h3>
+				
+					  <a href="/products" data-toggle="tooltip" title="Products!">Back to shopping</a>
+					</div>
+					
+					<script>
+					$(document).ready(function()"""),format.raw/*53.34*/("""{"""),format.raw/*53.35*/("""
+						"""),format.raw/*54.7*/("""$('[data-toggle="tooltip"]').tooltip();   
+					"""),format.raw/*55.6*/("""}"""),format.raw/*55.7*/(""");
+				""")))}/*56.7*/else/*56.12*/{_display_(Seq[Any](format.raw/*56.13*/("""
+					"""),format.raw/*57.6*/("""<h2>Product Not Found</h2>
+				""")))}),format.raw/*58.6*/("""
+		"""),format.raw/*59.3*/("""</div>
+	"""),format.raw/*60.18*/("""
+""")))}),format.raw/*61.2*/("""
 """))
       }
     }
@@ -84,11 +107,11 @@ Seq[Any](format.raw/*1.46*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 19 18:48:09 GMT 2017
-                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/purchase.scala.html
-                  HASH: 1eb7e428138258a99a2fcd01de8540c47cc9321d
-                  MATRIX: 977->1|1116->45|1146->50|1175->71|1214->73|1245->95|1275->99|1404->203|1425->216|1464->218|1497->225|1635->336|1645->337|1674->345|1727->371|1775->398|2547->1153|2560->1158|2599->1159|2633->1166|2696->1199|2727->1203|2764->1228|2797->1231
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|40->8|40->8|40->8|41->9|44->12|44->12|44->12|44->12|44->12|65->33|65->33|65->33|66->34|67->35|68->36|69->37|70->38
+                  DATE: Thu Dec 21 14:45:24 GMT 2017
+                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/purchase.scala.html
+                  HASH: d7ccc3ea28c44f3ec1460364d7060742e752617e
+                  MATRIX: 977->1|1116->45|1144->48|1173->69|1212->71|1242->92|1271->95|1414->213|1435->226|1474->228|1506->234|1641->342|1651->343|1680->351|1733->377|1781->404|3386->1981|3415->1982|3449->1989|3524->2037|3552->2038|3578->2047|3591->2052|3630->2053|3663->2059|3725->2091|3755->2094|3791->2118|3823->2120
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|37->5|40->8|40->8|40->8|41->9|44->12|44->12|44->12|44->12|44->12|85->53|85->53|86->54|87->55|87->55|88->56|88->56|88->56|89->57|90->58|91->59|92->60|93->61
                   -- GENERATED --
               */
           

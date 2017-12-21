@@ -36,7 +36,7 @@ Seq[Any](format.raw/*1.62*/("""
 """),_display_(/*4.2*/main("Add Product", user)/*4.27*/ {_display_(Seq[Any](format.raw/*4.29*/("""
     """),format.raw/*5.5*/("""<div class="container fluid col-md-12">
         <h2>Add a new product</h2>
-        """),_display_(/*7.10*/helper/*7.16*/.form(action = controllers.routes.HomeController.addProductSubmit())/*7.84*/ {_display_(Seq[Any](format.raw/*7.86*/("""
+        """),_display_(/*7.10*/form(action=routes.HomeController.addProductSubmit(),'class -> "form horizontal", 'role -> "form")/*7.108*/{_display_(Seq[Any](format.raw/*7.109*/("""
             """),_display_(/*8.14*/CSRF/*8.18*/.formField),format.raw/*8.28*/("""
             """),format.raw/*9.13*/("""<div class="form-group">
                 """),_display_(/*10.18*/inputText(productForm("name"), '_label -> "Name",
@@ -57,12 +57,14 @@ Seq[Any](format.raw/*1.62*/("""
             """),_display_(/*25.14*/inputText(productForm("id"), '_label -> "", 'hidden -> "hidden")),format.raw/*25.78*/("""
             """),format.raw/*26.13*/("""<div class="form-group">
                 <input type="submit" value="Add/Update Product" class="btn btn-primary">
-                <a href=""""),_display_(/*28.27*/routes/*28.33*/.HomeController.products()),format.raw/*28.59*/("""">
+                <a href=""""),_display_(/*28.27*/routes/*28.33*/.HomeController.index(0)),format.raw/*28.57*/("""">
                     <button type="button" class="btn btn-warning">Cancel</button>
                 </a>
             </div>
         """)))}),format.raw/*32.10*/("""
 """)))}),format.raw/*33.2*/("""
+
+
 """))
       }
     }
@@ -79,11 +81,11 @@ Seq[Any](format.raw/*1.62*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 19 18:13:21 GMT 2017
-                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/addProduct.scala.html
-                  HASH: 8da0e34a7dab800ef60ad6e1bd478dc5ca5430d7
-                  MATRIX: 985->1|1118->64|1163->61|1191->81|1219->84|1252->109|1291->111|1323->117|1435->203|1449->209|1525->277|1564->279|1605->294|1617->298|1647->308|1688->322|1758->365|1871->457|1913->471|2003->534|2130->640|2172->654|2262->717|2377->811|2419->825|2509->888|2624->982|2666->996|2714->1017|2799->1081|2841->1095|3010->1237|3025->1243|3072->1269|3241->1407|3274->1410
-                  LINES: 28->1|31->2|34->1|35->3|36->4|36->4|36->4|37->5|39->7|39->7|39->7|39->7|40->8|40->8|40->8|41->9|42->10|43->11|44->12|46->14|47->15|48->16|50->18|51->19|52->20|54->22|55->23|56->24|57->25|57->25|58->26|60->28|60->28|60->28|64->32|65->33
+                  DATE: Thu Dec 21 14:13:40 GMT 2017
+                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/addProduct.scala.html
+                  HASH: 1b7a903916cb00ce88344ef29141a1d88d5a8f79
+                  MATRIX: 985->1|1118->63|1163->61|1190->79|1217->81|1250->106|1289->108|1320->113|1430->197|1537->295|1576->296|1616->310|1628->314|1658->324|1698->337|1767->379|1879->470|1920->483|2008->544|2134->649|2175->662|2263->723|2377->816|2418->829|2506->890|2620->983|2661->996|2708->1016|2793->1080|2834->1093|3001->1233|3016->1239|3061->1263|3226->1397|3258->1399
+                  LINES: 28->1|31->2|34->1|35->3|36->4|36->4|36->4|37->5|39->7|39->7|39->7|40->8|40->8|40->8|41->9|42->10|43->11|44->12|46->14|47->15|48->16|50->18|51->19|52->20|54->22|55->23|56->24|57->25|57->25|58->26|60->28|60->28|60->28|64->32|65->33
                   -- GENERATED --
               */
           

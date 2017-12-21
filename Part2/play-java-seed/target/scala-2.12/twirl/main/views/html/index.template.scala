@@ -34,7 +34,7 @@ Seq[Any](format.raw/*1.60*/("""
 
 """),_display_(/*3.2*/main("Home",user)/*3.19*/ {_display_(Seq[Any](format.raw/*3.21*/("""
 			"""),format.raw/*4.4*/("""<div class="container-fluid">
-				<h1>Welcome to Software.ie</h1>
+				<h1></h1>
 			</div>
 			
 			"""),format.raw/*8.21*/("""
@@ -72,12 +72,70 @@ Seq[Any](format.raw/*1.60*/("""
 				</a>
 			</div>
 
-			<div class="container-fluid">
-				<h4>To start shopping you can click "Products" to See all Products or Search for something you want</h4>
-				<h4>Software.ie is a premium liscensed reseller of Software keys since 2017</h4>
-			</div>
-			"""),format.raw/*47.19*/("""
-""")))}),format.raw/*48.2*/("""
+			<html lang="en">
+				<head>
+				  <title>Bootstrap Example</title>
+				  <meta charset="utf-8">
+				  <meta name="viewport" content="width=device-width, initial-scale=1">
+				  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				</head>
+				<body>
+				
+				<div class="jumbotron text-center">
+				  <h1> Welcome to Software.ie</h1>
+				  <p></p> 
+				</div>
+				  
+				<div class="container">
+				  <div class="row">
+					<div class="col-sm-4">
+					  <h3>Purchase Products</h3>
+					  <p>Click Purchase to buy now</p>
+					
+					</div>
+					<div class="col-sm-4">
+					  <h3>Login Details</h3>
+					  <p>To log in you must be admin</p>
+					  <p>Login to update and delete Products</p>
+					</div>
+					<div class="col-sm-4">
+					  <h3>This weeks offer</h3> 
+					  <p>Destiny 4 only 79.99 Euro.</p>
+					  <p>Get it while its hot</p>
+					</div>
+				  </div>
+				  <!DOCTYPE html>
+				  <html lang="en">
+				  <head>
+					<title>Bootstrap Example</title>
+					<meta charset="utf-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				  </head>
+				  <body>
+				  
+				  <div class="container">
+					<h3>Not a member?</h3>
+					<p>Sign in below for offers and more.</p>
+					<a href="/login" data-toggle="tooltip" title="Login/SignUp">Sign up/Login</a>
+				  </div>
+				  
+				  <script>
+				  $(document).ready(function()"""),format.raw/*96.35*/("""{"""),format.raw/*96.36*/("""
+					  """),format.raw/*97.8*/("""$('[data-toggle="tooltip"]').tooltip();   
+				  """),format.raw/*98.7*/("""}"""),format.raw/*98.8*/(""");
+				  </script>
+				  
+				  </body>
+				  </html>
+				  
+				</div>
+			"""),format.raw/*105.19*/("""
+""")))}),format.raw/*106.2*/("""
 """))
       }
     }
@@ -94,11 +152,11 @@ Seq[Any](format.raw/*1.60*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 19 18:23:43 GMT 2017
-                  SOURCE: C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/app/views/index.scala.html
-                  HASH: 2ebba4198e086e703113e71cb83735d4a2506faf
-                  MATRIX: 980->1|1133->59|1163->64|1188->81|1227->83|1258->88|1372->192|1403->197|1821->588|1836->594|1897->634|1998->708|2013->714|2074->754|2176->829|2191->835|2248->871|2348->944|2363->950|2420->986|3127->1680|3160->1683
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|40->8|41->9|50->18|50->18|50->18|54->22|54->22|54->22|58->26|58->26|58->26|61->29|61->29|61->29|79->47|80->48
+                  DATE: Thu Dec 21 14:47:45 GMT 2017
+                  SOURCE: /home/wdd/webapps/webProject/Part2/play-java-seed/app/views/index.scala.html
+                  HASH: 2f0d9afab551ef79544e94ea62c94d938da60ebe
+                  MATRIX: 980->1|1133->59|1161->62|1186->79|1225->81|1255->85|1343->163|1373->167|1782->549|1797->555|1858->595|1955->665|1970->671|2031->711|2129->782|2144->788|2201->824|2298->894|2313->900|2370->936|4716->3254|4745->3255|4780->3263|4856->3312|4884->3313|4988->3403|5021->3405
+                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|40->8|41->9|50->18|50->18|50->18|54->22|54->22|54->22|58->26|58->26|58->26|61->29|61->29|61->29|128->96|128->96|129->97|130->98|130->98|137->105|138->106
                   -- GENERATED --
               */
           

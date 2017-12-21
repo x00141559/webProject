@@ -1,7 +1,7 @@
 GET     /                           controllers.HomeController.index(cat:Long?=0L)
 GET     /addProduct                 controllers.HomeController.addProduct 
-POST    /addProductSubmit           controllers.HomeController.addProductSubmit 
-GET     /delProduct/:id             controllers.HomeController.deleteProduct(id: Long) 
+GET   /addProductSubmit           controllers.HomeController.addProductSubmit 
+GET     /deleteProduct/:id             controllers.HomeController.deleteProduct(id: Long) 
 GET     /updateProduct/:id          controllers.HomeController.updateProduct(id: Long) 
 GET     /search                     controllers.HomeController.search(query: String ?="All")
 GET     /products                   controllers.HomeController.products

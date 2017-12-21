@@ -1,7 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\jordo\Desktop\GitCA2\Part2\play-java-seed\app\views\addProduct.scala.html:15:42: ')' expected but symbol literal found.[0m
-[0m[[0m[31merror[0m] [0m[0m                'class -> "form-control" 'rows -> "5")[0m
-[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\jordo\Desktop\GitCA2\Part2\play-java-seed\app\views\addProduct.scala.html:33:3: ';' expected but ')' found.[0m
-[0m[[0m[31merror[0m] [0m[0m}[0m
-[0m[[0m[31merror[0m] [0m[0m ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/webProject/Part2/play-java-seed/app/views/addProduct.scala.html:16:16: not enough arguments for method apply: (field: play.api.data.Field, options: Seq[(String, String)], args: (Symbol, Any)*)(implicit handler: views.html.helper.FieldConstructor, implicit messages: play.api.i18n.MessagesProvider)play.twirl.api.HtmlFormat.Appendable in object select.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameters field, options, args.[0m
+[0m[[0m[31merror[0m] [0m[0m        @select([0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -55,7 +55,9 @@ public class Product extends Model {
         }
 
     }
-
+    public void setDescription(String description){
+        this.description = description;
+    }
     public static Product findById(Long id) {
         return find.byId(id);
     }
@@ -84,5 +86,13 @@ public class Product extends Model {
     public double getPrice() {
         return price;
     }
-
+    public void setPrice(double price){
+        this.price = price;
+        }
+        public int getStock(){
+            return stock;
+        }
+        public void setStock(int stock){
+            this.stock= stock;
+        }
 }

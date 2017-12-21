@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/jordo/Desktop/GitCA2/Part2/play-java-seed/conf/routes
-// @DATE:Tue Dec 19 17:35:48 GMT 2017
+// @SOURCE:/home/wdd/webapps/webProject/Part2/play-java-seed/conf/routes
+// @DATE:Thu Dec 21 14:01:24 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -25,7 +25,7 @@ package controllers.javascript {
       "controllers.HomeController.addProductSubmit",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addProductSubmit"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addProductSubmit"})
         }
       """
     )
@@ -45,7 +45,7 @@ package controllers.javascript {
       "controllers.HomeController.deleteProduct",
       """
         function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "delProduct/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteProduct/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )

@@ -47,21 +47,21 @@ public class HomeController extends Controller {
 
     public Result addProductSubmit(){
         Form<Product> newProductForm = formFactory.form(Product.class).bindFromRequest();
-        if(newProductForm.hasErrors()) {
+
+        if (newProductForm.hasErrors()) {
             return badRequest(addProduct.render(newProductForm,User.getUserById(session().get("email"))));
-        }
-        else{
-            Product newProduct = newProductForm.get();
-            if (newProduct.getId()==null){
+        }else { Product newProduct = newProductForm.get();
+            if(newProduct.getId() == null){
                 newProduct.save();
-                flash("success","Product "+newProduct.getName()+" was added");
             }
-            else if(newProduct.getId()!=null){
-                newProduct.update();       
-                flash("success","Product "+newProduct.getName()+" was updated");
-            }
+else if(newProduct.getId() != null){
+    newProduct.update();
+}
+           
+            flash("The product","Product "+"has been added successfully"+ newProduct.getName() +" was added");
+            return redirect(controllers.routes.HomeController.index(0));
+
         }
-        return redirect(controllers.routes.HomeController.products());
     }
 
 

@@ -87,3 +87,6 @@ run
 play clean-all
 play
 run
+exit
+run
+exit
